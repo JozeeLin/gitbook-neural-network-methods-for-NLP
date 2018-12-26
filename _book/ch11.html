@@ -1,0 +1,558 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第11章 使用词嵌入 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ch12.html" />
+    
+    
+    <link rel="prev" href="ch10.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch06.html">
+            
+                <a href="ch06.html">
+            
+                    
+                    第六章 文本特征构造
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch07.html">
+            
+                <a href="ch07.html">
+            
+                    
+                    第七章 NLP特征的案例分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch08.html">
+            
+                <a href="ch08.html">
+            
+                    
+                    第八章 从文本特征到输入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ch09.html">
+            
+                <a href="ch09.html">
+            
+                    
+                    第九章 语言模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="ch10.html">
+            
+                <a href="ch10.html">
+            
+                    
+                    第十章 预训练的词表示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="ch11.html">
+            
+                <a href="ch11.html">
+            
+                    
+                    第11章 使用词嵌入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="ch12.html">
+            
+                <a href="ch12.html">
+            
+                    
+                    第12章 案例分析：一种用于句子意义推理的前馈结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="ch13.html">
+            
+                <a href="ch13.html">
+            
+                    
+                    第13章 n元语法探测器：卷积神经网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="ch14.html">
+            
+                <a href="ch14.html">
+            
+                    
+                    第14章 循环神经网络：序列和栈建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ch15.html">
+            
+                <a href="ch15.html">
+            
+                    
+                    第15章 实际的循环神经网络结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="ch16.html">
+            
+                <a href="ch16.html">
+            
+                    
+                    第16章 通过循环网络建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="ch17.html">
+            
+                <a href="ch17.html">
+            
+                    
+                    第17章条件生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="ch18.html">
+            
+                <a href="ch18.html">
+            
+                    
+                    第18章 用递归神经网络对树建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="ch19.html">
+            
+                <a href="ch19.html">
+            
+                    
+                    第19章 结构化输出预测
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第11章 使用词嵌入</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;11&#x7AE0;-&#x4F7F;&#x7528;&#x8BCD;&#x5D4C;&#x5165;">&#x7B2C;11&#x7AE0; &#x4F7F;&#x7528;&#x8BCD;&#x5D4C;&#x5165;</h1>
+<p>&#x672C;&#x7AE0;&#x5C06;&#x8BA8;&#x8BBA;&#x4E00;&#x90E8;&#x5206;&#x8BCD;&#x5411;&#x91CF;&#x7684;&#x7528;&#x9014;</p>
+<h2 id="111-&#x8BCD;&#x5411;&#x91CF;&#x7684;&#x83B7;&#x53D6;">11.1 &#x8BCD;&#x5411;&#x91CF;&#x7684;&#x83B7;&#x53D6;</h2>
+<p>&#x4ECE;&#x4E00;&#x4E2A;&#x8BED;&#x6599;&#x5E93;&#x4E2D;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x5730;&#x8BAD;&#x7EC3;&#x8BCD;&#x5D4C;&#x5165;&#x5411;&#x91CF;&#xFF0C;&#x5E76;&#x4E14;&#x5DF2;&#x6709;&#x6709;&#x6548;&#x7684;&#x8BAD;&#x7EC3;&#x7B97;&#x6CD5;&#x5B9E;&#x73B0;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;<strong>&#x8BAD;&#x7EC3;&#x673A;&#x5236;&#x548C;&#x5E95;&#x5C42;&#x8BED;&#x6599;&#x5E93;&#x7684;&#x5DEE;&#x5F02;&#x5BF9;&#x6700;&#x7EC8;&#x7684;&#x8868;&#x793A;&#x6709;&#x5F88;&#x5927;&#x7684;&#x5F71;&#x54CD;</strong>&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x7528;&#x7684;&#x9884;&#x8BAD;&#x7EC3;&#x7684;&#x8868;&#x793A;&#x53EF;&#x80FD;&#x4E0D;&#x662F;&#x7279;&#x5B9A;&#x5E94;&#x7528;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x7684;&#x6700;&#x4F73;&#x9009;&#x62E9;&#x3002;</p>
+</blockquote>
+<p>&#x76EE;&#x524D;word2vec&#x7684;&#x5B9E;&#x73B0;&#x7248;&#x672C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>c&#x8BED;&#x8A00;&#x7248;<a href="https://code.google.com/archive/p/word2vec" target="_blank">https://code.google.com/archive/p/word2vec</a></li>
+<li>python&#x7248;&#x672C;<a href="https://radimrehurek.com/gensim" target="_blank">https://radimrehurek.com/gensim</a></li>
+<li>&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x4E0A;&#x4E0B;&#x6587;&#x4FE1;&#x606F;&#x7684;&#x6539;&#x8FDB;&#x7248;<a href="https://bitbucket.org/yoavgo/word2vecf" target="_blank">https://bitbucket.org/yoavgo/word2vecf</a>.</li>
+</ul>
+<p>&#x76EE;&#x524D;glove&#x7684;&#x6709;&#x6548;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li><a href="http://nlp.stanford.edu/projects/glove/" target="_blank">http://nlp.stanford.edu/projects/glove/</a></li>
+</ul>
+<p>&#x9884;&#x8BAD;&#x7EC3;&#x8BCD;&#x5411;&#x91CF;&#x7684;&#x6765;&#x6E90;&#xFF1A;</p>
+<ul>
+<li>&#x82F1;&#x6587;&#x8BCD;&#x5411;&#x91CF;<ul>
+<li>word2vec&#x9879;&#x76EE;&#x548C;glove&#x9879;&#x76EE;&#x63D0;&#x4F9B;&#x5BF9;&#x5E94;&#x7684;&#x9884;&#x8BAD;&#x7EC3;&#x8BCD;&#x5411;&#x91CF;</li>
+</ul>
+</li>
+<li>&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x8BCD;&#x5411;&#x91CF;<ul>
+<li>Polyglot&#x9879;&#x76EE;&#x4E2D;&#x83B7;&#x5F97;<a href="http://polyglot.readhedocs.org" target="_blank">http://polyglot.readhedocs.org</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="112&#x8BCD;&#x7684;&#x76F8;&#x4F3C;&#x5EA6;">11.2&#x8BCD;&#x7684;&#x76F8;&#x4F3C;&#x5EA6;</h2>
+<p>&#x9884;&#x8BAD;&#x7EC3;&#x8BCD;&#x5411;&#x91CF;&#x7684;&#x7528;&#x9014;&#xFF1A;</p>
+<ul>
+<li><p>&#x5C06;&#x5B83;&#x4EEC;&#x8F93;&#x5165;&#x5230;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x4E2D;</p>
+</li>
+<li><p>&#x4F7F;&#x7528;&#x76F8;&#x4F3C;&#x51FD;&#x6570;&#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x8BCD;&#x5411;&#x91CF;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x4F3C;&#x5EA6;&#xFF0C;<strong>&#x5E38;&#x89C1;&#x7684;&#x76F8;&#x4F3C;&#x51FD;&#x6570;&#x4E3A;&#x4F59;&#x5F26;&#x76F8;&#x4F3C;&#x5EA6;</strong>
+$$
+\rm{sim}_{cos}(u,v) = \frac{u.v}{|u|_2|v|_2}
+$$</p>
+</li>
+</ul>
+<h2 id="113&#x8BCD;&#x805A;&#x7C7B;">11.3&#x8BCD;&#x805A;&#x7C7B;</h2>
+<p>&#x8BCD;&#x5411;&#x91CF;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E9B;&#x805A;&#x7C7B;&#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x805A;&#x7C7B;&#xFF0C;&#x6BD4;&#x5982;&#x5B9A;&#x4E49;&#x5728;&#x6B27;&#x5F0F;&#x7A7A;&#x95F4;&#x4E0A;&#x7684;K&#x5747;&#x503C;&#x65B9;&#x6CD5;&#x3002;</p>
+<h2 id="114&#x5BFB;&#x627E;&#x76F8;&#x4F3C;&#x8BCD;">11.4&#x5BFB;&#x627E;&#x76F8;&#x4F3C;&#x8BCD;</h2>
+<p>&#x4F7F;&#x7528;&#x884C;&#x6B63;&#x5219;&#x5316;&#x5D4C;&#x5165;&#x77E9;&#x9635;&#xFF0C;&#x4E24;&#x4E2A;&#x8BCD;$w_1$&#x4E0E;$w_2$&#x7684;&#x4F59;&#x5F26;&#x76F8;&#x4F3C;&#x5EA6;&#x7531;&#x4E0B;&#x5F0F;&#x7ED9;&#x51FA;&#xFF1A;</p>
+<p>$$
+\rm{sim}<em>{cos}(w_1,w_2) = E</em>{[w<em>1]}.E</em>{[w_2]}</p>
+<p>$$</p>
+<p>&#x6839;&#x636E;&#x5206;&#x5E03;&#x5F0F;&#x65B9;&#x6CD5;&#x5F97;&#x5230;&#x7684;&#x8BCD;&#x76F8;&#x4F3C;&#x5EA6;&#x53EF;&#x4EE5;&#x4E0E;&#x5176;&#x4ED6;&#x5F62;&#x5F0F;&#x7684;&#x76F8;&#x4F3C;&#x5EA6;&#x8FDB;&#x884C;&#x7ED3;&#x5408;&#x3002;</p>
+<ul>
+<li><p>&#x57FA;&#x4E8E;&#x62FC;&#x5199;&#x76F8;&#x4F3C;&#x7A0B;&#x5EA6;&#x5B9A;&#x4E49;&#x4E00;&#x79CD;&#x5EA6;&#x91CF;&#xFF08;&#x5171;&#x4EAB;&#x76F8;&#x540C;&#x5B57;&#x6BCD;&#x7684;&#x8BCD;&#x8BED;&#xFF09;</p>
+<blockquote>
+<p>&#x901A;&#x8FC7;&#x8FC7;&#x6EE4;&#x4E0E;&#x76EE;&#x6807;&#x8BCD;&#x8BED;&#x5206;&#x5E03;&#x5F0F;&#x76F8;&#x4F3C;&#x5EA6;&#x6392;&#x540D;&#x524D;k&#x7684;&#x5217;&#x8868;&#x5F97;&#x5230;&#x62FC;&#x5199;&#x4E0A;&#x4E5F;&#x76F8;&#x4F3C;&#x7684;&#x8BCD;&#xFF0C;&#x4ECE;&#x800C;&#x627E;&#x5230;&#x8BE5;&#x76EE;&#x6807;&#x8BCD;&#x8BED;&#x7684;&#x62FC;&#x5199;&#x53D8;&#x5F62;&#x548C;&#x5E38;&#x89C1;&#x62FC;&#x5199;&#x9519;&#x8BEF;&#x3002;</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>&#x4E00;&#x7EC4;&#x8BCD;&#x7684;&#x76F8;&#x4F3C;&#x5EA6;</strong></p>
+<p>&#x5BF9;&#x5E94;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x662F;&#xFF1A;</p>
+<ul>
+<li><p><u>&#x901A;&#x5E38;&#x5728;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x76F8;&#x5173;&#x8BCD;&#x5217;&#x8868;&#x5E76;&#x5E0C;&#x671B;&#x5BF9;&#x8BCD;&#x8868;&#x8FDB;&#x884C;&#x6269;&#x5145;&#x65F6;&#x51FA;&#x73B0;&#xFF08;&#x5982;&#x5DF2;&#x77E5;4&#x4E2A;&#x56FD;&#x5BB6;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x5E0C;&#x671B;&#x6269;&#x5145;&#x51FA;&#x66F4;&#x591A;&#x7684;&#x56FD;&#x540D;&#x7B49;&#x5176;&#x4ED6;&#x573A;&#x666F;&#xFF09;</u></p>
+</li>
+<li><p>&#x5F53;&#x6211;&#x4EEC;&#x5C06;&#x76F8;&#x4F3C;&#x5EA6;&#x89C6;&#x4E3A;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x8BCD;&#x7684;&#x7ED9;&#x5B9A;&#x542B;&#x4E49;&#x7684;&#x76F8;&#x4F3C;&#x5EA6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x901A;&#x8FC7;&#x521B;&#x9020;&#x4E00;&#x4E2A;&#x4E0E;&#x8BE5;&#x542B;&#x4E49;&#x76F8;&#x5173;&#x7684;&#x8BCD;&#x5217;&#x8868;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x67E5;&#x8BE2;&#x8BCD;&#x7684;&#x76F8;&#x4F3C;&#x5EA6;&#x4E0E;&#x8FD9;&#x4E2A;&#x542B;&#x4E49;&#x5173;&#x8054;&#x3002;</p>
+<blockquote>
+<p>&#x5C06;&#x8BCD;&#x7EC4;&#x4E0E;&#x8BCD;w&#x7684;&#x76F8;&#x4F3C;&#x5EA6;&#x5B9A;&#x4E49;&#x4E3A;&#xFF1A;
+$$
+\rm{sim}(w,w<em>{1:k}) = \frac{1}{k} \sum</em>{i=1}^k sim_{cos}(w, w_i)
+$$</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>&#x8BA1;&#x7B97;&#x4E00;&#x7EC4;&#x8BCD;&#x4E0E;&#x5176;&#x4ED6;&#x591A;&#x4E2A;&#x8BCD;&#x7684;&#x5E73;&#x5747;&#x4F59;&#x5F26;&#x76F8;&#x4F3C;&#x5EA6;</strong></p>
+<p>$$
+s = E(w_1+w_2+...+w_k)/k</p>
+<p>$$</p>
+<h2 id="115&#x540C;&#x4E2D;&#x9009;&#x5F02;">11.5&#x540C;&#x4E2D;&#x9009;&#x5F02;</h2>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x8BCD;&#x5217;&#x8868;&#xFF0C;&#x627E;&#x51FA;&#x4E0D;&#x5C5E;&#x4E8E;&#x8FD9;&#x4E2A;&#x5217;&#x8868;&#x7684;&#x67D0;&#x4E2A;&#x8BCD;&#xFF0C;&#x79F0;&#x4E3A;&#x540C;&#x4E2D;&#x9009;&#x5F02;&#xFF08;odd-one-out)</p>
+<ol>
+<li>&#x6C42;&#x51FA;&#x6BCF;&#x4E2A;&#x8BCD;&#x4E0E;&#x8BCD;&#x5217;&#x8868;&#x7684;&#x76F8;&#x4F3C;&#x5EA6;</li>
+<li>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x76F8;&#x4F3C;&#x5EA6;&#x6700;&#x5C0F;&#x7684;&#x8BCD;&#xFF08;&#x6700;&#x4E0D;&#x76F8;&#x4F3C;&#x7684;&#x8BCD;&#xFF09;</li>
+</ol>
+<h2 id="116-&#x77ED;&#x6587;&#x672C;&#x76F8;&#x4F3C;&#x5EA6;">11.6 &#x77ED;&#x6587;&#x672C;&#x76F8;&#x4F3C;&#x5EA6;</h2>
+<p>&#x5F62;&#x5F0F;&#x4E0A;&#xFF0C;&#x8003;&#x8651;&#x4E24;&#x4E2A;&#x6587;&#x6863;$D_1 = w_1^1,w_2^1,w_3^1,...,w_m^1$&#x548C;$D_2=w_1^2,w_2^2,...,w_n^2$&#xFF0C;&#x5E76;&#x5C06;&#x6587;&#x6863;&#x76F8;&#x4F3C;&#x5EA6;&#x5B9A;&#x4E49;&#x4E3A;&#xFF1A;</p>
+<p>$$
+\rm{sim}<em>{doc}(D_1, D_2) = \sum</em>{i=1}^m\sum_{j=1}^n \cos(w_i^1, w_j^2)</p>
+<p>$$
+&#x4F7F;&#x7528;&#x57FA;&#x672C;&#x7684;&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x65B9;&#x6CD5;&#xFF0C;&#x5047;&#x8BBE;&#x4EE5;&#x4E0A;&#x7684;&#x6587;&#x6863;&#x8BCD;&#x5411;&#x91CF;&#x4E3A;&#x6B63;&#x5219;&#x5316;&#x8BCD;&#x5411;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;&#x4E0A;&#x5F0F;&#x8868;&#x793A;&#x6210;&#x8FDE;&#x7EED;&#x8BCD;&#x888B;&#x7684;&#x70B9;&#x79EF;&#x6765;&#x8BA1;&#x7B97;&#xFF1A;</p>
+<p>$$
+\rm{sim}<em>{doc}(D_1,D_2) = (\sum</em>{i=1}^m w<em>i^1).(\sum</em>{j=1}^nw_j^2)</p>
+<p>$$
+&#x90A3;&#x4E48;&#x6587;&#x6863;$D^{&apos;}=w^{&apos;}<em>{1:n}$&#x4E0E;&#x6587;&#x6863;&#x96C6;&#x5408;$D</em>{1:k}$&#x7684;&#x76F8;&#x4F3C;&#x5EA6;&#x8BA1;&#x7B97;&#xFF1A;</p>
+<p>$$
+s = D.(\sum_{i=1}^n w_i^{&apos;})</p>
+<p>$$</p>
+<h2 id="117-&#x8BCD;&#x7684;&#x7C7B;&#x6BD4;">11.7 &#x8BCD;&#x7684;&#x7C7B;&#x6BD4;</h2>
+<h3 id="1171-&#x7C7B;&#x6BD4;&#x4EFB;&#x52A1;">11.7.1 &#x7C7B;&#x6BD4;&#x4EFB;&#x52A1;</h3>
+<p>$$
+\rm{analogy(m:w\rightarrow k:?)} = \rm{argmax}_{v \in V;\notin {m,w,k}}\cos(v,k-m+w) \tag{11.4}</p>
+<p>$$</p>
+<p>Levy&#x548C;Goldberg[2014]&#x53D1;&#x73B0;&#xFF0C;&#x5BF9;&#x4E8E;&#x6B63;&#x5219;&#x5316;&#x5411;&#x91CF;&#xFF0C;&#x89E3;&#x51B3;&#x7B49;&#x5F0F;11.4&#x7684;&#x6781;&#x5927;&#x5316;&#x7B49;&#x4EF7;&#x4E8E;&#x89E3;&#x51B3;&#x7B49;&#x5F0F;11.5&#xFF1A;</p>
+<p>$$
+\rm{analogy}(m:w \rightarrow k:?) = \rm{argmax}_{v \in V;\notin {m,w,k}}\cos(v,k)-\cos(v,m)+\cos(v,w) \tag{11.5}</p>
+<p>$$
+&#x7B49;&#x5F0F;11.5&#x79F0;&#x4E3A;3CosAdd&#x65B9;&#x6CD5;&#x3002;&#x4F46;&#x6B64;&#x65B9;&#x6CD5;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x53EF;&#x80FD;&#x7F3A;&#x9677;&#xFF1A;&#x7531;&#x4E8E;&#x76EE;&#x6807;&#x7684;&#x52A0;&#x548C;&#x6027;&#x8D28;&#xFF0C;&#x548C;&#x4E2D;&#x7684;&#x67D0;&#x4E00;&#x9879;&#x53EF;&#x80FD;&#x4F1A;&#x63A7;&#x5236;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x4ECE;&#x800C;&#x4F7F;&#x5F97;&#x5176;&#x4ED6;&#x8BCD;&#x7684;&#x4FE1;&#x606F;&#x88AB;&#x4E25;&#x91CD;&#x5FFD;&#x7565;&#x3002;</p>
+<p>3CosMul&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x8FD9;&#x79CD;&#x7F3A;&#x9677;&#xFF1A;</p>
+<p>$$
+\rm{analogy}(m:w \rightarrow k:?) = \rm{argmax}_{v \in V;\notin {m,w,k}} \frac{\cos(v,k)\cos(v,w)}{\cos(v,m)+\epsilon}</p>
+<p>$$</p>
+<h2 id="118&#x6539;&#x88C5;&#x548C;&#x6620;&#x5C04;">11.8&#x6539;&#x88C5;&#x548C;&#x6620;&#x5C04;</h2>
+<p>Faruqui&#x7B49;&#x4EBA;[2015]&#x63D0;&#x51FA;&#x7684;&#x6539;&#x88C5;&#x65B9;&#x6CD5;&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x8FD9;&#x6837;&#x7684;&#x6570;&#x636E;&#x6765;&#x63D0;&#x9AD8;&#x8BCD;&#x5D4C;&#x5165;&#x77E9;&#x9635;&#x7684;&#x8D28;&#x91CF;&#xFF0C;Faruqui&#x7B49;&#x4EBA;[2015]&#x5C55;&#x793A;&#x4E86;&#x5229;&#x7528;WordNet&#x548C;PPDB&#x7684;&#x4FE1;&#x606F;&#x6765;&#x63D0;&#x9AD8;&#x9884;&#x8BAD;&#x7EC3;&#x5D4C;&#x5165;&#x5411;&#x91CF;&#x7684;&#x65B9;&#x6CD5;&#x7684;&#x6709;&#x6548;&#x6027;&#xFF08;&#x53C2;&#x8003;6.2.1&#x8282;&#xFF09;</p>
+<p><strong>&#x5047;&#x8BBE;</strong>&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x9884;&#x8BAD;&#x7EC3;&#x8BCD;&#x5D4C;&#x5165;&#x5411;&#x91CF;&#x77E9;&#x9635;E&#x548C;&#x4E00;&#x4E2A;&#x7F16;&#x7801;&#x4E86;&#x8BCD;&#x95F4;&#x4E8C;&#x5143;&#x76F8;&#x4F3C;&#x5EA6;&#x5173;&#x7CFB;&#x7684;&#x56FE;g&#x2014;&#x2014;&#x56FE;&#x4E2D;&#x7684;&#x7ED3;&#x70B9;&#x662F;&#x8BCD;&#xFF0C;&#x5982;&#x679C;&#x4ED6;&#x4EEC;&#x662F;&#x6709;&#x8FB9;&#x76F4;&#x63A5;&#x8FDE;&#x63A5;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x8BCD;&#x5C31;&#x5F88;&#x76F8;&#x4F3C;&#x3002;</p>
+<blockquote>
+<p>&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x8FD9;&#x91CC;&#x7684;&#x56FE;&#x662F;&#x4E00;&#x79CD;&#x4E00;&#x822C;&#x5316;&#x7684;&#x8868;&#x793A;&#xFF0C;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x88AB;&#x8BA4;&#x4E3A;&#x5F7C;&#x6B64;&#x76F8;&#x4F3C;&#x7684;&#x8BCD;&#x5BF9;&#x7684;&#x5217;&#x8868;&#x53EF;&#x4EE5;&#x8F7B;&#x677E;&#x5730;&#x5957;&#x7528;&#x5728;&#x8BE5;&#x6846;&#x67B6;&#x5185;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x7684;&#x673A;&#x5236;&#x662F;&#x89E3;&#x51B3;&#x4E00;&#x4E2A;&#x4F18;&#x5316;&#x95EE;&#x9898;&#xFF1A;<strong>&#x641C;&#x7D22;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8BCD;&#x5D4C;&#x5165;&#x77E9;&#x9635;$\hat{E}$&#x4F7F;&#x5F97;&#x5176;&#x6BCF;&#x4E00;&#x884C;&#x548C;E&#x4E2D;&#x5BF9;&#x5E94;&#x884C;&#x63A5;&#x8FD1;&#x7684;&#x540C;&#x65F6;&#x4E5F;&#x63A5;&#x8FD1;&#x4E8E;&#x5176;&#x5728;&#x56FE;g&#x4E2D;&#x7684;&#x90BB;&#x5C45;&#x3002;</strong></p>
+<p>&#x5177;&#x4F53;&#x4F18;&#x5316;&#x76EE;&#x6807;&#x662F;&#xFF1A;</p>
+<p>$$
+\rm{argmin}<em>{\hat{E}} \sum</em>{i=1}^n (\alpha<em>i |\hat{E}</em>{[w<em>i]}-E</em>{[w<em>i]}|^2 + \sum</em>{(w<em>i,w_j)\in g}\beta</em>{ij}|\hat{E}<em>{[w_i]}-\hat{E}</em>{[w_j]}|^2)</p>
+<p>$$
+&#x5176;&#x4E2D;&#xFF0C;$\alpha<em>i$&#x548C;$\beta</em>{ij}$&#x53CD;&#x6620;&#x4E86;&#x4E00;&#x4E2A;&#x8BCD;&#x548C;&#x5B83;&#x672C;&#x8EAB;&#x6216;&#x5176;&#x4ED6;&#x5355;&#x8BCD;&#x76F8;&#x4F3C;&#x7684;&#x91CD;&#x8981;&#x7A0B;&#x5EA6;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;$\alpha<em>i$&#x901A;&#x5E38;&#x90FD;&#x8BBE;&#x4E3A;1&#xFF0C;$\beta</em>{ij}$&#x8BBE;&#x4E3A;&#x8BCD;$w_i$&#x5728;&#x56FE;G&#x4E2D;&#x5EA6;&#x7684;&#x5012;&#x6570;&#xFF08;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x8BCD;&#x540C;&#x65F6;&#x6709;&#x51E0;&#x4E2A;&#x8FD1;&#x90BB;&#xFF0C;&#x5219;&#x5BF9;&#x4E8E;&#x5176;&#x4E2D;&#x6BCF;&#x4E2A;&#x8BCD;&#x7684;&#x5F71;&#x54CD;&#x90FD;&#x4F1A;&#x8F83;&#x5C0F;&#xFF09;&#xFF0C;&#x5728;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x4E2D;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x7684;&#x6548;&#x679C;&#x975E;&#x5E38;&#x597D;&#x3002;</p>
+<p><strong>&#x95EE;&#x9898;&#xFF1A;&#x4E00;&#x4E2A;&#x8BCD;&#x5B58;&#x5728;&#x4E8E;&#x4E24;&#x4E2A;&#x5D4C;&#x5165;&#x77E9;&#x9635;&#x4E2D;&#x600E;&#x4E48;&#x5904;&#x7406;&#xFF1F;</strong></p>
+<p>&#x4E00;&#x4E2A;&#x662F;&#x4ECE;&#x5C0F;&#x8BCD;&#x8868;&#x4E2D;&#x5F97;&#x5230;&#x7684;$E^S$&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x662F;&#x4ECE;&#x5927;&#x8BCD;&#x8868;&#x4E2D;&#x83B7;&#x5F97;&#x5E76;&#x5355;&#x8BCD;&#x8BAD;&#x7EC3;&#x7684;$E^L$&#x3002;&#x4E8C;&#x8005;&#x662F;&#x4E0D;&#x76F8;&#x5BB9;&#x7684;&#x3002;&#x5982;&#x679C;&#x60F3;&#x8981;&#x7528;&#x5927;&#x77E9;&#x9635;$E^L$&#x4E2D;&#x7684;&#x8BCD;&#x5411;&#x91CF;&#x6765;&#x8868;&#x793A;&#x5C0F;&#x8BCD;&#x8868;$E^S$&#x4E2D;&#x65E0;&#x6CD5;&#x5F97;&#x5230;&#x7684;&#x8BCD;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<strong>&#x7EBF;&#x6027;&#x6620;&#x5C04;(&#x5FC5;&#x987B;&#x57FA;&#x4E8E;&#x5047;&#x8BBE;&#x524D;&#x63D0;&#xFF1A;&#x4E24;&#x4E2A;&#x7A7A;&#x95F4;&#x662F;&#x53EF;&#x4EE5;&#x7EBF;&#x6027;&#x5BF9;&#x5E94;&#x7684;&#x3002;)&#x7684;&#x65B9;&#x6CD5;</strong>&#xFF0C;&#x5728;&#x4E24;&#x4E2A;&#x5D4C;&#x5165;&#x7A7A;&#x95F4;&#x4E2D;&#x67B6;&#x8D77;&#x201C;&#x6865;&#x6881;&#x201D;[Kiros et al. &#xFF0C;2015&#xFF0C;Mikolov et al. , 2013]&#xFF0C;&#x8BAD;&#x7EC3;&#x76EE;&#x6807;&#x662F;&#x5BFB;&#x627E;&#x4E00;&#x4E2A;&#x6620;&#x5C04;&#x77E9;&#x9635;M&#x6765;&#x5C06;$E^L$&#x4E2D;&#x7684;&#x5217;&#x4E0E;$E^S$&#x4E2D;&#x7684;&#x5217;&#x76F8;&#x5BF9;&#x5E94;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x89E3;&#x51B3;&#x4EE5;&#x4E0B;&#x4F18;&#x5316;&#x95EE;&#x9898;&#xFF1A;</p>
+<p>$$
+\rm{argmin<em>M} \sum</em>{w\in V<em>S \and V_L} |E^L</em>{[w]}.M-E^S_{[w]}|</p>
+<p>$$
+&#x5B66;&#x4E60;&#x5230;&#x7684;&#x77E9;&#x9635;&#x7528;&#x4E8E;&#x6620;&#x5C04;$E^L$&#x4E2D;&#x65E0;&#x6CD5;&#x4E0E;$E^S$&#x4E2D;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x5217;&#x3002;<u>Kiros&#x7B49;&#x4EBA;[2015]&#x6210;&#x529F;&#x5730;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x63D0;&#x9AD8;&#x57FA;&#x4E8E;LSTM&#x7684;&#x53E5;&#x5B50;&#x7F16;&#x7801;&#x5668;&#x7684;&#x8BCD;&#x8868;&#x5927;&#x5C0F;&#x3002;</u></p>
+<h2 id="119-&#x5B9E;&#x7528;&#x6027;&#x548C;&#x9677;&#x9631;">11.9 &#x5B9E;&#x7528;&#x6027;&#x548C;&#x9677;&#x9631;</h2>
+<p>&#x5728;&#x4F7F;&#x7528;&#x9884;&#x8BAD;&#x7EC3;&#x8BCD;&#x5411;&#x91CF;&#x9700;&#x8981;&#x8003;&#x8651;&#x4E00;&#x4E0B;&#x8FD9;&#x4E9B;&#x56E0;&#x7D20;&#xFF1A;</p>
+<ul>
+<li>&#x8BAD;&#x7EC3;&#x96C6;&#x7684;&#x8D44;&#x6E90;<ul>
+<li>&#x8D44;&#x6E90;&#x5927;&#x5C0F;</li>
+<li>&#x5BF9;&#x5E94;&#x7684;&#x9886;&#x57DF;</li>
+<li>&#x7279;&#x5B9A;&#x95EE;&#x9898;</li>
+</ul>
+</li>
+<li>&#x5B9A;&#x4E49;&#x76F8;&#x4F3C;&#x5EA6;&#x5206;&#x5E03;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x5185;&#x5BB9;</li>
+<li>&#x8D85;&#x53C2;&#x6570;</li>
+</ul>
+<p>&#x5177;&#x4F53;&#x53C2;&#x8003;Levy&#x7B49;&#x4EBA;[2015]&#x7684;&#x5DE5;&#x4F5C;&#x3002;</p>
+<h3 id="&#x6CE8;&#x610F;&#xFF1A;"><strong>&#x6CE8;&#x610F;&#xFF1A;</strong></h3>
+<ol>
+<li>&#x5F53;&#x4F7F;&#x7528;&#x9884;&#x8BAD;&#x7EC3;&#x7684;&#x8BCD;&#x5411;&#x91CF;&#x65F6;&#xFF0C;<strong>&#x6700;&#x597D;&#x4F7F;&#x7528;&#x4E0E;&#x6E90;&#x8BED;&#x6599;&#x76F8;&#x540C;&#x7684;&#x5207;&#x5206;&#x8BCD;&#x9879;&#x7684;&#x65B9;&#x6CD5;&#x548C;&#x6587;&#x672C;&#x89C4;&#x8303;&#x5316;&#x65B9;&#x6CD5;</strong>&#x3002;</li>
+<li>&#x7531;&#x8BCD;&#x5411;&#x91CF;&#x5F15;&#x5165;&#x7684;&#x76F8;&#x4F3C;&#x5EA6;&#x95EE;&#x9898;&#x662F;&#x57FA;&#x4E8E;&#x5206;&#x5E03;&#x4FE1;&#x53F7;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x5BB9;&#x6613;&#x53D7;&#x5230;10.7&#x8282;&#x4E2D;&#x6240;&#x8BA8;&#x8BBA;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x76F8;&#x4F3C;&#x5EA6;&#x65B9;&#x6CD5;&#x7684;&#x6240;&#x6709;&#x9650;&#x5236;&#x7684;&#x5F71;&#x54CD;&#x3002;<strong>&#x5F53;&#x4F7F;&#x7528;&#x8BCD;&#x5411;&#x91CF;&#x65F6;&#x9700;&#x8981;&#x8003;&#x8651;&#x8FD9;&#x4E9B;&#x9650;&#x5236;&#x3002;</strong></li>
+</ol>
+<p>y</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ch10.html" class="navigation navigation-prev " aria-label="Previous page: 第十章 预训练的词表示">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ch12.html" class="navigation navigation-next " aria-label="Next page: 第12章 案例分析：一种用于句子意义推理的前馈结构">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第11章 使用词嵌入","level":"1.7","depth":1,"next":{"title":"第12章 案例分析：一种用于句子意义推理的前馈结构","level":"1.8","depth":1,"path":"ch12.md","ref":"ch12.md","articles":[]},"previous":{"title":"第十章 预训练的词表示","level":"1.6","depth":1,"path":"ch10.md","ref":"ch10.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch11.md","mtime":"2018-10-29T10:09:40.395Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T16:12:48.013Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

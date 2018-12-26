@@ -1,0 +1,560 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第16章 通过循环网络建模 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ch17.html" />
+    
+    
+    <link rel="prev" href="ch15.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch06.html">
+            
+                <a href="ch06.html">
+            
+                    
+                    第六章 文本特征构造
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch07.html">
+            
+                <a href="ch07.html">
+            
+                    
+                    第七章 NLP特征的案例分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch08.html">
+            
+                <a href="ch08.html">
+            
+                    
+                    第八章 从文本特征到输入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ch09.html">
+            
+                <a href="ch09.html">
+            
+                    
+                    第九章 语言模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="ch10.html">
+            
+                <a href="ch10.html">
+            
+                    
+                    第十章 预训练的词表示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ch11.html">
+            
+                <a href="ch11.html">
+            
+                    
+                    第11章 使用词嵌入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="ch12.html">
+            
+                <a href="ch12.html">
+            
+                    
+                    第12章 案例分析：一种用于句子意义推理的前馈结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="ch13.html">
+            
+                <a href="ch13.html">
+            
+                    
+                    第13章 n元语法探测器：卷积神经网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="ch14.html">
+            
+                <a href="ch14.html">
+            
+                    
+                    第14章 循环神经网络：序列和栈建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ch15.html">
+            
+                <a href="ch15.html">
+            
+                    
+                    第15章 实际的循环神经网络结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12" data-path="ch16.html">
+            
+                <a href="ch16.html">
+            
+                    
+                    第16章 通过循环网络建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="ch17.html">
+            
+                <a href="ch17.html">
+            
+                    
+                    第17章条件生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="ch18.html">
+            
+                <a href="ch18.html">
+            
+                    
+                    第18章 用递归神经网络对树建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="ch19.html">
+            
+                <a href="ch19.html">
+            
+                    
+                    第19章 结构化输出预测
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第16章 通过循环网络建模</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;16&#x7AE0;-&#x901A;&#x8FC7;&#x5FAA;&#x73AF;&#x7F51;&#x7EDC;&#x5EFA;&#x6A21;">&#x7B2C;16&#x7AE0; &#x901A;&#x8FC7;&#x5FAA;&#x73AF;&#x7F51;&#x7EDC;&#x5EFA;&#x6A21;</h1>
+<p>&#x73B0;&#x5728;&#x63A2;&#x7D22;RNN&#x5728;NLP&#x5E94;&#x7528;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x5B9E;&#x4F8B;&#x3002;</p>
+<h2 id="161-&#x63A5;&#x6536;&#x5668;">16.1 &#x63A5;&#x6536;&#x5668;</h2>
+<p>RNN&#x6700;&#x7B80;&#x5355;&#x7684;&#x5E94;&#x7528;&#x5C31;&#x662F;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x63A5;&#x6536;&#x5668;&#xFF1A;&#x8BFB;&#x5165;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#xFF0C;&#x6700;&#x540E;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x4E8C;&#x503C;&#x6216;&#x8005;&#x591A;&#x5206;&#x7C7B;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<blockquote>
+<p>&#x5728;&#x5F88;&#x591A;NLP&#x4EFB;&#x52A1;&#x4E2D;&#xFF0C;&#x8BCD;&#x8BED;&#x7684;&#x987A;&#x5E8F;&#x4EE5;&#x53CA;&#x53E5;&#x5B50;&#x7684;&#x7ED3;&#x6784;&#x5E76;&#x975E;&#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF0C;&#x6240;&#x4EE5;<strong>&#x8BCD;&#x888B;&#x6A21;&#x578B;&#x4EE5;&#x53CA;n&#x5143;&#x6587;&#x6CD5;&#x888B;&#x6A21;&#x578B;&#x5C31;&#x80FD;&#x591F;&#x5F97;&#x5230;&#x548C;RNN&#x63A5;&#x8FD1;&#x751A;&#x81F3;&#x66F4;&#x597D;&#x7684;&#x6027;&#x80FD;&#x3002;</strong></p>
+</blockquote>
+<p>&#x672C;&#x8282;&#x5C55;&#x793A;&#x4E86;&#x4E24;&#x4E2A;&#x5728;&#x8BED;&#x8A00;&#x95EE;&#x9898;&#x4E2D;&#x4F7F;&#x7528;&#x63A5;&#x6536;&#x5668;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<ol>
+<li>&#x60C5;&#x611F;&#x5206;&#x7C7B;&#x3002;</li>
+<li>&#x4EBA;&#x4E3A;&#x6784;&#x9020;&#xFF08;&#x5C55;&#x793A;&#x4E86;RNN&#x5F3A;&#x5927;&#x7684;&#x5E8F;&#x5217;&#x5B66;&#x4E60;&#x80FD;&#x529B;&#xFF09;</li>
+</ol>
+<h3 id="1611-&#x60C5;&#x611F;&#x5206;&#x7C7B;&#x5668;">16.1.1 &#x60C5;&#x611F;&#x5206;&#x7C7B;&#x5668;</h3>
+<p><strong>&#x53E5;&#x5B50;&#x7EA7;&#x60C5;&#x611F;&#x5206;&#x7C7B;</strong></p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x53E5;&#x5B50;(&#x901A;&#x5E38;&#x662F;&#x8BC4;&#x8BBA;&#x4FE1;&#x606F;)&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x8FD9;&#x4E2A;&#x53E5;&#x5B50;&#x5206;&#x6210;&#x4E24;&#x7C7B;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#xFF1A;&#x6D88;&#x6781;&#x7684;&#x6216;&#x79EF;&#x6781;&#x7684;&#x3002;(&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x66F4;&#x590D;&#x6742;&#x7684;&#x5206;&#x7C7B;:&#x6D88;&#x6781;&#xFF0C;&#x4E2D;&#x7ACB;&#xFF0C;&#x79EF;&#x6781;)&#x3002;</p>
+<p>&#x5B9E;&#x9645;&#x7684;&#x60C5;&#x611F;&#x5206;&#x7C7B;&#x4E0D;&#x4EC5;&#x9700;&#x8981;&#x7406;&#x89E3;&#x5355;&#x72EC;&#x7684;&#x77ED;&#x8BED;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x7406;&#x89E3;&#x8FD9;&#x4E9B;&#x77ED;&#x8BED;&#x51FA;&#x73B0;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x4ECE;&#x8BED;&#x8A00;&#x89D2;&#x5EA6;&#x6574;&#x4F53;&#x6784;&#x5EFA;&#x53E5;&#x5B50;&#x7684;&#x60C5;&#x611F;&#x6781;&#x6027;&#xFF0C;&#x540C;&#x65F6;&#x8FD8;&#x9700;&#x8981;&#x5F88;&#x597D;&#x5730;&#x5904;&#x7406;&#x8BBD;&#x523A;&#x548C;&#x9690;&#x55BB;&#x3002;&#xFF08;&#x66F4;&#x52A0;&#x8BE6;&#x7EC6;&#x4E86;&#x89E3;&#x8BF7;&#x53C2;&#x8003;Pang&#x548C;Lee&#x3010;2008&#x3011;&#xFF09;</p>
+<p><strong>&#x5EFA;&#x6A21;&#x8FC7;&#x7A0B;&#xFF1A;</strong></p>
+<ul>
+<li>RNN&#x8BFB;&#x53D6;&#x5E8F;&#x5217;&#x5316;&#x540E;&#x7684;&#x8BCD;&#x8BED;</li>
+<li>RNN&#x7684;&#x6700;&#x7EC8;&#x72B6;&#x6001;&#x9001;&#x5165;&#x4E00;&#x4E2A;MLP&#xFF0C;MLP&#x901A;&#x8FC7;softmax&#x5C42;&#x8F93;&#x51FA;&#x4E8C;&#x5206;&#x7C7B;&#x7684;&#x503C;&#x3002;</li>
+</ul>
+<p>&#x6B64;&#x8BAD;&#x7EC3;&#x8FC7;&#x7A0B;&#x4E3A;&#x76D1;&#x7763;&#x5B66;&#x4E60;&#xFF0C;&#x4F7F;&#x7528;&#x4EA4;&#x53C9;&#x71B5;&#x635F;&#x5931;&#x3002;</p>
+<p>&#x66F4;&#x7EC6;&#x7C92;&#x5EA6;&#x7684;&#x5206;&#x7C7B;&#x4EFB;&#x52A1;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x611F;&#x60C5;&#x6781;&#x6027;&#x7ED9;&#x51FA;&#x4E00;&#x4E2A;1~5&#x6216;&#x8005;1~10&#x7684;&#x503C;,&#x90A3;&#x4E48;&#x5C31;&#x9700;&#x8981;&#x628A;softmax&#x5C42;&#x6539;&#x6210;5&#x5206;&#x7C7B;&#x6216;&#x8005;10&#x5206;&#x7C7B;&#x3002;</p>
+<p>$$
+\rm{p(label=k|w<em>{1:n})=\hat{y}</em>{[k]}} \
+\hat{y} = \rm{softmax(MLP(RNN(x<em>{1:n})))} \tag{16.1}\
+x</em>{1:n} = E<em>{[w_1]},...,E</em>{[w_n]}</p>
+<p>$$
+&#x8BCD;&#x5D4C;&#x5165;&#x77E9;&#x9635;E&#x901A;&#x8FC7;&#x9884;&#x8BAD;&#x7EC3;&#x7684;&#x8BCD;&#x5411;&#x91CF;&#x521D;&#x59CB;&#x5316;&#x3002;</p>
+<p><strong>&#x6539;&#x8FDB;&#x7248;(1)</strong></p>
+<p>&#x901A;&#x5E38;&#x5C06;&#x5F0F;(16.1)&#x6269;&#x5C55;&#x4E3A;2&#x4E2A;RNN&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x4E00;&#x4E2A;&#x4EE5;&#x7ED9;&#x51FA;&#x7684;&#x987A;&#x5E8F;&#x8BFB;&#x5165;&#x53E5;&#x5B50;&#x5E8F;&#x5217;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x5219;&#x4EE5;&#x9006;&#x5E8F;&#x8BFB;&#x5165;&#x53E5;&#x5B50;&#x5E8F;&#x5217;&#x3002;&#x8FD9;&#x4E24;&#x4E2A;RNN&#x7684;&#x6700;&#x7EC8;&#x72B6;&#x6001;&#x62FC;&#x63A5;&#x8D77;&#x6765;&#x9001;&#x5165;MLP&#x5206;&#x7C7B;&#x5668;&#x4E2D;&#xFF1A;</p>
+<p>$$
+\rm{p(label=k|w<em>{1:n}) = \hat{y}</em>{[k]}} \
+\hat{y} = \rm{softmax(MLP([RNN^f(x<em>{1:n});RNN^b(x</em>{n:1})]))} \ \tag{16.2}
+x<em>{1:n} = E</em>{[w<em>1]},...,E</em>{[w_n]}</p>
+<p>$$
+<strong>&#x6539;&#x8FDB;&#x7248;(2)</strong></p>
+<p>&#x5BF9;&#x4E8E;&#x66F4;&#x957F;&#x7684;&#x53E5;&#x5B50;&#xFF0C;Li&#x7B49;&#x4EBA;[2015]&#x53D1;&#x73B0;&#x4F7F;&#x7528;&#x5C42;&#x6B21;&#x5316;&#x7684;&#x7ED3;&#x6784;&#x5F88;&#x6709;&#x5E2E;&#x52A9;&#xFF0C;&#x53E5;&#x5B50;&#x5728;&#x8FD9;&#x79CD;&#x5C42;&#x6B21;&#x5316;&#x7684;&#x7ED3;&#x6784;&#x4E2D;&#x4EE5;&#x6807;&#x70B9;&#x7B26;&#x53F7;&#x4E3A;&#x5206;&#x9694;&#x677F;&#x62C6;&#x5206;&#x6210;&#x4E86;&#x66F4;&#x77ED;&#x957F;&#x5EA6;&#x7684;&#x5355;&#x5143;&#x3002;</p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x6BCF;&#x4E2A;&#x62C6;&#x5206;&#x540E;&#x7684;&#x53E5;&#x5B50;&#x5355;&#x4F4D;&#x88AB;&#x9001;&#x5165;&#x5F0F;(16.2)&#x63CF;&#x8FF0;&#x7684;RNN&#x4E2D;&#x3002;</p>
+<p>&#x8F93;&#x51FA;&#x5411;&#x91CF;&#x7684;&#x5E8F;&#x5217;(&#x6BCF;&#x4E2A;&#x53E5;&#x5B50;&#x5355;&#x4F4D;&#x4E00;&#x4E2A;&#x5411;&#x91CF;)&#x968F;&#x540E;&#x88AB;&#x9001;&#x5165;&#x4E00;&#x4E2A;&#x5F0F;(16.1)&#x63CF;&#x8FF0;&#x7684;RNN&#x63A5;&#x6536;&#x5668;&#x4E2D;&#x3002;</p>
+<p>&#x5F62;&#x5F0F;&#x5730;&#xFF0C;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x53E5;&#x5B50;$w<em>{1:n}$&#xFF0C;&#x8FD9;&#x4E2A;&#x53E5;&#x5B50;&#x88AB;&#x5206;&#x4E3A;m&#x4E2A;&#x5355;&#x4F4D;$w^1</em>{1:l<em>1},...,w^m</em>{1:l_m}$&#xFF0C;&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x7531;&#x4E0B;&#x5F0F;&#x7ED9;&#x51FA;&#xFF1A;</p>
+<p>$$
+\rm{p(label=k|w<em>{1:n}) = \hat{y}</em>{[k]}}\
+\rm{\hat{y} = softmax(MLP(RNN(z<em>{1:m})))}\
+\rm{z_i = [RNN^f(x^i</em>{1:l<em>i});RNN^b(x^i</em>{l<em>i:1})]} \ \tag{16.3}
+\rm{x^i</em>{1:l<em>i}} = E</em>{[w^i<em>1],...,E</em>{w^i_{l_i}}}</p>
+<p>$$
+&#x4E0D;&#x540C;&#x7684;m&#x4E2A;&#x5355;&#x4F4D;&#x5F97;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x60C5;&#x611F;&#x6807;&#x7B7E;&#x3002;&#x66F4;&#x9AD8;&#x4E00;&#x5C42;&#x7684;&#x63A5;&#x6536;&#x5668;&#x8BFB;&#x5165;&#x4F4E;&#x5C42;&#x7F16;&#x7801;&#x5668;&#x4EA7;&#x751F;&#x7684;&#x6458;&#x8981;&#x4FE1;&#x606F;$z_{1:m}$&#xFF0C;&#x5E76;&#x51B3;&#x5B9A;&#x603B;&#x4F53;&#x7684;&#x60C5;&#x611F;&#x5206;&#x7C7B;&#x7ED3;&#x679C;&#x3002;</p>
+<p><strong>&#x6587;&#x672C;&#x7EA7;&#x7684;&#x60C5;&#x611F;&#x5206;&#x7C7B;</strong></p>
+<p>Tang&#x7B49;&#x4EBA;[2015]&#x53D1;&#x73B0;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x5F88;&#x9002;&#x5408;&#x4F7F;&#x7528;&#x7C7B;&#x4F3C;Li&#x7B49;&#x4EBA;[2015]&#x7684;&#x5C42;&#x6B21;&#x5316;&#x7ED3;&#x6784;&#x7684;&#x65B9;&#x6CD5;&#x3002;[&#x5F0F;(16.3)]:</p>
+<p>&#x6BCF;&#x4E2A;&#x53E5;&#x5B50;$s<em>i$&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x95E8;&#x7ED3;&#x6784;&#x7684;RNN&#x7F16;&#x7801;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x5411;&#x91CF;$z_i$&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x5411;&#x91CF;$z</em>{1:n}$&#x9001;&#x5165;&#x7B2C;2&#x4E2A;&#x95E8;&#x7ED3;&#x6784;&#x7684;RNN&#x4E2D;&#xFF0C;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x5411;&#x91CF;$h=RNN(z_{1:n})$&#xFF0C;&#x8FD9;&#x4E2A;&#x5411;&#x91CF;&#x7528;&#x6765;&#x9884;&#x6D4B;:$\rm{\hat{y} = softmax(MLP(h))}$</p>
+<p><strong>&#x6539;&#x8FDB;&#x7248;(1)</strong></p>
+<p>&#x6240;&#x6709;&#x6765;&#x81EA;&#x6587;&#x672C;&#x7EA7;RNN&#x7684;&#x4E2D;&#x95F4;&#x5411;&#x91CF;&#x90FD;&#x88AB;&#x4FDD;&#x7559;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x5E73;&#x5747;&#x503C;&#x88AB;&#x9001;&#x5165;&#x4E00;&#x4E2A;MLP&#x4E2D;</p>
+<p>($\rm{h<em>{1:n}=RNN^*(z</em>{1:n}), \hat{y}= softmax(MLP(\frac{1}{n} \sum_{i=1}^n h_i))}$)</p>
+<p>&#x8FD9;&#x79CD;&#x4F7F;&#x7528;&#x5E73;&#x5747;&#x503C;&#x7684;&#x6548;&#x679C;&#x66F4;&#x80DC;&#x4E00;&#x7B79;&#x3002;</p>
+<h3 id="1612-&#x4E3B;&#x8C13;&#x4E00;&#x81F4;&#x8BED;&#x6CD5;&#x68C0;&#x67E5;">16.1.2 &#x4E3B;&#x8C13;&#x4E00;&#x81F4;&#x8BED;&#x6CD5;&#x68C0;&#x67E5;</h3>
+<p>&#x82F1;&#x8BED;&#x53E5;&#x5B50;&#x7684;&#x89C4;&#x5219;:&#x73B0;&#x5728;&#x65F6;&#x6001;&#x8C13;&#x8BED;&#x52A8;&#x8BCD;&#x7684;&#x5355;&#x590D;&#x6570;&#x5FC5;&#x987B;&#x4E0E;&#x52A8;&#x8BCD;&#x7684;&#x4E3B;&#x8BED;&#x4E00;&#x81F4;&#x3002;</p>
+<p><strong>&#x96BE;&#x70B9;&#xFF1A;</strong>&#x4E3B;&#x8BED;&#x548C;&#x8C13;&#x8BED;&#x53EF;&#x80FD;&#x88AB;&#x4EFB;&#x610F;&#x957F;&#x5EA6;&#x7684;&#x8BED;&#x8A00;&#x5355;&#x4F4D;&#x9694;&#x5F00;&#xFF0C;&#x8FD9;&#x5C31;&#x5BFC;&#x81F4;&#x4E86;&#x4E2D;&#x95F4;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x4E8E;&#x4E3B;&#x8BED;&#x5355;&#x590D;&#x6570;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x540D;&#x8BCD;&#x3002;</p>
+<p><strong>&#x63AA;&#x65BD;&#xFF1A;</strong>&#x7ED9;&#x51FA;&#x53E5;&#x5B50;&#x7684;&#x6B63;&#x786E;&#x53E5;&#x6CD5;&#x5206;&#x6790;&#x6811;&#xFF0C;&#x52A8;&#x8BCD;&#x4E0E;&#x5176;&#x4E3B;&#x8BED;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x53D8;&#x5F97;&#x663E;&#x800C;&#x6613;&#x89C1;&#x3002;</p>
+<p>&#x6A21;&#x578B;&#x76F4;&#x63A5;&#x4F5C;&#x4E3A;&#x4E00;&#x79CD;&#x63A5;&#x6536;&#x5668;&#x88AB;&#x8BAD;&#x7EC3;&#xFF1A;</p>
+<p>$$
+\rm{\hat{y} = softmax(MLP(RNN(E<em>{[w_1]},...,E</em>{[w_n]})))}</p>
+<p>$$
+&#x4F7F;&#x7528;&#x4EA4;&#x53C9;&#x71B5;&#x635F;&#x5931;&#x51FD;&#x6570;&#x3002;</p>
+<p><strong>&#x8FD9;&#x662F;&#x4E00;&#x9879;&#x56F0;&#x96BE;&#x7684;&#x4EFB;&#x52A1;</strong>&#x3002;&#x975E;&#x5E38;&#x95F4;&#x63A5;&#x7684;&#x76D1;&#x7763;&#xFF1A;&#x76D1;&#x7763;&#x4FE1;&#x53F7;&#x4E0D;&#x5305;&#x62EC;&#x4EFB;&#x4F55;&#x627E;&#x5230;&#x8BED;&#x6CD5;&#x4FE1;&#x606F;&#x7684;&#x7EBF;&#x7D22;&#x3002;</p>
+<p>RNN&#x5FC5;&#x987B;&#x5B66;&#x4E60;<strong>&#x6570;&#x5B57;&#x7684;&#x6982;&#x5FF5;</strong>(&#x590D;&#x6570;&#x548C;&#x5355;&#x6570;&#x8BCD;&#x5C5E;&#x4E8E;&#x4E0D;&#x540C;&#x7684;&#x7EC4;)&#x3001;<strong>&#x4E3B;&#x8C13;&#x4E00;&#x81F4;&#x7684;&#x6982;&#x5FF5;</strong>(&#x52A8;&#x8BCD;&#x7684;&#x5F62;&#x5F0F;&#x5E94;&#x8BE5;&#x7B26;&#x5408;&#x4E3B;&#x8BED;&#x7684;&#x5F62;&#x5F0F;)&#x4EE5;&#x53CA;<strong>&#x4E3B;&#x4F53;&#x7684;&#x6982;&#x5FF5;</strong>(&#x4EE5;&#x786E;&#x5B9A;&#x52A8;&#x8BCD;&#x4E4B;&#x524D;&#x7684;&#x54EA;&#x4E2A;&#x540D;&#x8BCD;&#x51B3;&#x5B9A;&#x52A8;&#x8BCD;&#x7684;&#x5F62;&#x5F0F;)&#x3002;&#x8BC6;&#x522B;&#x6B63;&#x786E;&#x7684;&#x4E3B;&#x8BED;&#x9700;&#x8981;<strong>&#x5B66;&#x4E60;&#x8BC6;&#x522B;&#x5D4C;&#x5957;&#x7ED3;&#x6784;&#x7684;&#x8BED;&#x6CD5;&#x6807;&#x8BB0;</strong>&#x3002;</p>
+<h2 id="162&#x4F5C;&#x4E3A;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x5668;&#x7684;rnn">16.2&#x4F5C;&#x4E3A;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x5668;&#x7684;RNN</h2>
+<p>RNN&#x7684;&#x4E00;&#x4E2A;&#x6700;&#x4E3B;&#x8981;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x5C31;&#x662F;&#x4F5C;&#x4E3A;&#x7075;&#x6D3B;&#x53EF;&#x8BAD;&#x7EC3;&#x7684;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x5668;&#xFF0C;&#x5728;&#x5904;&#x7406;&#x5E8F;&#x5217;&#x95EE;&#x9898;&#x65F6;&#x80FD;&#x591F;&#x66FF;&#x4EE3;&#x4F20;&#x7EDF;&#x7684;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x901A;&#x9053;&#x3002;<strong>&#x7279;&#x522B;&#x5730;&#xFF0C;RNN&#x662F;&#x57FA;&#x4E8E;&#x7A97;&#x53E3;&#x7684;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x5668;&#x7684;&#x826F;&#x597D;&#x66FF;&#x4EE3;&#x8005;</strong>&#x3002;</p>
+<h3 id="1621-&#x8BCD;&#x6027;&#x6807;&#x6CE8;">16.2.1 &#x8BCD;&#x6027;&#x6807;&#x6CE8;</h3>
+<p><strong>&#x6846;&#x67B6;&#xFF1A;&#x6DF1;&#x5EA6;&#x53CC;&#x5411;RNN</strong> &#x8BCD;&#x6027;&#x6807;&#x6CE8;&#x662F;&#x5E8F;&#x5217;&#x6807;&#x6CE8;&#x4EFB;&#x52A1;&#x7684;&#x7279;&#x5F81;&#x60C5;&#x51B5;&#xFF0C;&#x4E3A;&#x53E5;&#x5B50;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x8BCD;&#x8BED;&#x5206;&#x914D;&#x8BCD;&#x6027;&#x6807;&#x7B7E;&#x3002;</p>
+<ul>
+<li><p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x542B;&#x6709;n&#x4E2A;&#x8BCD;&#x8BED;&#x7684;&#x53E5;&#x5B50;$s=w<em>{1:n}$&#xFF0C;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x51FD;&#x6570;$x_i = \phi(s,i)$&#x6765;&#x628A;&#x53E5;&#x5B50;&#x8F6C;&#x5316;&#x4E3A;&#x8F93;&#x5165;&#x5411;&#x91CF;$x</em>{1:n}$&#x3002;</p>
+</li>
+<li><p>&#x8F93;&#x5165;&#x5411;&#x91CF;&#x5C06;&#x4F1A;&#x88AB;&#x9001;&#x5165;&#x4E00;&#x4E2A;&#x6DF1;&#x5EA6;&#x53CC;&#x5411;RNN&#x4E2D;&#xFF0C;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x8F93;&#x51FA;&#x5411;&#x91CF;$y<em>{1:n} = biRNN*(x</em>{1:n})$&#x3002;</p>
+</li>
+<li><p>&#x6BCF;&#x4E2A;&#x5411;&#x91CF;$y_i$&#x5C06;&#x88AB;&#x9001;&#x5165;&#x4E00;&#x4E2A;MLP&#x4E2D;&#xFF0C;&#x7528;&#x4E8E;&#x4ECE;&#x53EF;&#x80FD;&#x7684;k&#x4E2A;&#x6807;&#x7B7E;&#x4E2D;&#x9884;&#x6D4B;&#x8FD9;&#x4E2A;&#x8BCD;&#x8BED;&#x7684;&#x6807;&#x7B7E;&#x3002;</p>
+</li>
+</ul>
+<p><strong>&#x901A;&#x8FC7;&#x5B57;&#x7B26;&#x7EA7;&#x7684;RNN&#x5C06;&#x8BCD;&#x8BED;&#x8F6C;&#x5316;&#x4E3A;&#x8F93;&#x5165;</strong> &#x5982;&#x4F55;&#x628A;&#x4E00;&#x4E2A;&#x8BCD;&#x8BED;$w_i$&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x5411;&#x91CF;$x_i$?</p>
+<ol>
+<li>&#x4F7F;&#x7528;&#x8BCD;&#x5D4C;&#x5165;&#x5411;&#x91CF;&#xFF0C;&#x5B58;&#x5728;&#x8BCD;&#x8868;&#x8986;&#x76D6;&#x8303;&#x56F4;&#x7684;&#x95EE;&#x9898;OOV</li>
+<li>&#x901A;&#x8FC7;&#x8BCD;&#x8BED;&#x7684;&#x5B57;&#x7B26;&#x5E8F;&#x5217;&#x6765;&#x8868;&#x793A;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x8BCD;&#x8BED;&#x7684;&#x524D;&#x7F00;&#x3001;&#x540E;&#x7F00;&#x3001;&#x62FC;&#x5199;&#x63D0;&#x793A;(&#x5927;&#x5C0F;&#x5199;&#xFF0C;&#x8FDE;&#x5B57;&#x7B26;&#xFF0C;&#x6570;&#x5B57;)&#xFF0C;&#x8BCD;&#x7684;&#x6B67;&#x4E49;&#x7C7B;&#x7684;&#x6709;&#x6548;&#x63D0;&#x793A;&#x3002;</li>
+</ol>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x7EA7;&#x7684;RNN&#x3002;</p>
+<ul>
+<li><p>&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x7531;&#x5B57;&#x7B26;$c_1,...,c_l$&#x7EC4;&#x6210;&#x7684;&#x5355;&#x8BCD;w&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x6BCF;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x6620;&#x5C04;&#x5230;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;&#x5D4C;&#x5165;&#x5411;&#x91CF;$\textbf{c}_i$&#x3002;</p>
+</li>
+<li><p>&#x7136;&#x540E;&#xFF0C;&#x57FA;&#x4E8E;&#x8FD9;&#x4E9B;&#x5B57;&#x7B26;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x524D;&#x5411;RNN&#x548C;&#x4E00;&#x4E2A;&#x9006;&#x5411;RNN&#x5C06;&#x5355;&#x8BCD;&#x7F16;&#x7801;&#x3002;</p>
+</li>
+</ul>
+<p>RNN&#x7684;&#x7ED3;&#x679C;&#x53EF;&#x4EE5;&#x66FF;&#x4EE3;&#x8BCD;&#x5411;&#x91CF;&#xFF0C;&#x6216;&#x8005;&#x4EE5;&#x4E00;&#x79CD;&#x66F4;&#x597D;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x62FC;&#x63A5;&#x5728;&#x8BCD;&#x5411;&#x91CF;&#x540E;&#x9762;&#xFF1A;</p>
+<p>$$
+\rm{x<em>i = \phi(s,i) = [E</em>{[w<em>i]};RNN^f(c</em>{1:l});RNN^b(c_{l:1})]}</p>
+<p>$$
+<strong>&#x6700;&#x7EC8;&#x7684;&#x6A21;&#x578B;</strong> &#x6807;&#x6CE8;&#x6A21;&#x578B;&#x6700;&#x540E;&#x53D8;&#x6210;&#x4E86;&#xFF1A;</p>
+<p>$$
+\begin{aligned}
+p(t<em>i=j|w_1,...,w_n) &amp;= \rm{softmax(MLP(biRNN(x</em>{1:n},i)))<em>{[j]}}\
+x_i &amp;= \phi(s,i) = \rm{[E</em>{[w<em>i]};RNN^f(c</em>{1:l});RNN^b(c_{l:1})]}</p>
+<p>\end{aligned}</p>
+<p>$$
+<strong>&#x5B57;&#x7B26;&#x7EA7;&#x7684;&#x5377;&#x79EF;&#x548C;&#x6C60;&#x5316;</strong> &#x4F7F;&#x7528;&#x5B57;&#x7B26;&#x7EA7;&#x7684;&#x5377;&#x79EF;&#x548C;&#x6C60;&#x5316;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x6765;&#x8868;&#x793A;&#x8BCD;&#x8BED;</p>
+<p>Ma&#x548C;Hovy[2016]&#x5C55;&#x793A;&#x4E86;&#x5BF9;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#x4F7F;&#x7528;&#x7A97;&#x53E3;&#x5927;&#x5C0F;k=3&#x7684;&#x4E00;&#x5C42;&#x5377;&#x79EF;-&#x6C60;&#x5316;&#x7F51;&#x7EDC;&#x5B9E;&#x9645;&#x4E0A;&#x5BF9;&#x4E8E;&#x8BCD;&#x6027;&#x6807;&#x6CE8;&#x4EFB;&#x52A1;&#x548C;&#x547D;&#x540D;&#x5B9E;&#x4F53;&#x8BC6;&#x522B;&#x4EFB;&#x52A1;&#x662F;&#x5F88;&#x6709;&#x6548;&#x7684;&#x3002;</p>
+<p><strong>&#x7ED3;&#x6784;&#x5316;&#x7684;&#x6A21;&#x578B;</strong> </p>
+<p>&#x4E0A;&#x8FF0;&#x7684;&#x6A21;&#x578B;&#x4E2D;&#xFF0C;&#x5355;&#x8BCD;i&#x7684;&#x6807;&#x7B7E;&#x9884;&#x6D4B;&#x65F6;&#x72EC;&#x7ACB;&#x4E8E;&#x5176;&#x4ED6;&#x6807;&#x7B7E;&#x9884;&#x6D4B;&#x6765;&#x8BA1;&#x7B97;&#x7684;&#x3002;&#x4F46;&#x662F;&#x7B2C;i&#x4E2A;&#x6807;&#x7B7E;&#x53EF;&#x80FD;&#x4F1A;&#x4F9D;&#x8D56;&#x6A21;&#x578B;&#x524D;&#x9762;&#x9884;&#x6D4B;&#x51FA;&#x7684;&#x4E00;&#x4E9B;&#x6807;&#x7B7E;&#x3002;</p>
+<ul>
+<li>&#x8FD9;&#x4E2A;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x53EF;&#x4EE5;&#x662F;&#x4F9D;&#x8D56;&#x786E;&#x5B9A;&#x7684;&#x524D;k&#x4E2A;&#x6807;&#x7B7E;(&#x9075;&#x5FAA;&#x9A6C;&#x5C14;&#x79D1;&#x592B;&#x5047;&#x8BBE;)&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x6807;&#x7B7E;&#x7684;&#x5D4C;&#x5165;&#x5F62;&#x5F0F;$E_{[t]}$&#xFF0C;&#x7ED3;&#x679C;&#x5C31;&#x662F;&#xFF1A;</li>
+</ul>
+<p>$$
+\rm{p(t<em>i=j|w_1,...,w_n,t</em>{i-1},...,t<em>{i-k})} = softmax(MLP([biRNN(x</em>{1:n},i);E<em>{t</em>{i-1}};...;E<em>{[t</em>{i-k}]}]))_{[j]}</p>
+<p>$$</p>
+<ul>
+<li>&#x4F9D;&#x8D56;&#x4E8E;&#x6574;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x7B2C;i&#x4E2A;&#x6807;&#x7B7E;&#x4E4B;&#x524D;&#x7684;&#x9884;&#x6D4B;&#x7ED3;&#x679C;$t<em>{1:i-1}$&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;RNN&#x6765;&#x7F16;&#x7801;&#x6574;&#x4E2A;&#x6807;&#x7B7E;&#x5E8F;&#x5217;&#xFF1A;
+$$
+\rm{p(t_i=j|w_1,...,w_n,t</em>{1:i-1})} = softmax(MLP([biRNN(x<em>{1:n},i);RNN^t(t</em>{1:i-1})))_{[j]}
+$$</li>
+</ul>
+<p>&#x4EE5;&#x4E0A;&#x8FD9;&#x4E9B;&#x6A21;&#x578B;&#x88AB;&#x7528;&#x4E8E;Vaswani&#x7B49;[2016]&#x63D0;&#x51FA;&#x7684;CCG-supertagging&#x4EFB;&#x52A1;&#x4E2D;&#x3002;</p>
+<h3 id="1622-rnn-cnn-&#x6587;&#x672C;&#x5206;&#x7C7B;">16.2.2 RNN-CNN &#x6587;&#x672C;&#x5206;&#x7C7B;</h3>
+<p>&#x5728;&#x5B57;&#x7B26;&#x4E0A;&#x5E94;&#x7528;&#x4E00;&#x4E2A;&#x5C42;&#x6B21;&#x5316;&#x7684;&#x5377;&#x79EF;-&#x6C60;&#x5316;&#x7F51;&#x7EDC;(13.3&#x8282;)&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x66F4;&#x77ED;&#x7684;&#x5411;&#x91CF;&#x5E8F;&#x5217;&#xFF0C;&#x8FD9;&#x4E2A;&#x5411;&#x91CF;&#x5E8F;&#x5217;&#x4EE3;&#x8868;&#x4E86;&#x4E00;&#x79CD;&#x5B57;&#x7B26;&#x7EA7;&#x522B;&#x4E4B;&#x4E0A;&#x7684;&#x5355;&#x4F4D;(&#x53EF;&#x4EE5;&#x662F;&#x5927;&#x4E8E;&#x6216;&#x5C0F;&#x4E8E;&#x4E00;&#x4E2A;&#x8BCD;&#x8BED;&#x7684;&#x5355;&#x4F4D;)&#xFF0C;&#x7136;&#x540E;&#x628A;&#x7ED3;&#x679C;&#x7684;&#x5411;&#x91CF;&#x5E8F;&#x5217;&#x9001;&#x5165;2&#x4E2A;RNN&#x4EE5;&#x53CA;&#x5206;&#x7C7B;&#x5C42;&#x4E2D;&#x3002;</p>
+<blockquote>
+<p>Xiao&#x548C;Cho[2016]&#x5728;&#x6570;&#x4E2A;&#x6587;&#x672C;&#x5206;&#x7C7B;&#x4EFB;&#x52A1;&#x4E2D;&#x7684;&#x6A21;&#x578B;:</p>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#x5927;&#x5C0F;&#x4E3A;k&#x7684;&#x5377;&#x79EF;&#x6838;&#x5E94;&#x7528;&#x4E8E;&#x8F93;&#x5165;&#x5411;&#x91CF;&#x7684;&#x5E8F;&#x5217;</li>
+<li>&#x5BF9;&#x4EFB;&#x610F;&#x4E24;&#x7EC4;&#x76F8;&#x90BB;&#x7684;&#x8F93;&#x51FA;&#x5411;&#x91CF;&#x8FDB;&#x884C;max-pooling&#x64CD;&#x4F5C;&#xFF0C;&#x4F7F;&#x5E8F;&#x5217;&#x957F;&#x5EA6;&#x51CF;&#x534A;&#x3002;</li>
+<li>&#x4F7F;&#x7528;dropout&#x673A;&#x5236;</li>
+<li>&#x968F;&#x540E;&#x4EA7;&#x751F;&#x7684;&#x8F93;&#x51FA;&#x5411;&#x91CF;&#x88AB;&#x9001;&#x5165;&#x4E00;&#x4E2A;&#x53CC;&#x5411;&#x7684;GRU RNN&#x91CC;</li>
+<li>&#x518D;&#x6B21;&#x4F7F;&#x7528;dropout&#x673A;&#x5236;</li>
+<li>&#x6700;&#x540E;&#x9001;&#x5165;&#x4E00;&#x4E2A;&#x5206;&#x7C7B;&#x5668;&#x4E2D;(&#x4E00;&#x4E2A;&#x5168;&#x8FDE;&#x63A5;&#x5C42;&#x540E;&#x8DDF;&#x4E00;&#x4E2A;softmax&#x5C42;)</li>
+</ul>
+</blockquote>
+<h3 id="1623-&#x5F27;&#x5206;&#x89E3;&#x4F9D;&#x5B58;&#x53E5;&#x6CD5;&#x5206;&#x6790;">16.2.3 &#x5F27;&#x5206;&#x89E3;&#x4F9D;&#x5B58;&#x53E5;&#x6CD5;&#x5206;&#x6790;</h3>
+<p>&#x4F9D;&#x5B58;&#x53E5;&#x6CD5;&#x5206;&#x6790;&#x4EFB;&#x52A1;&#x7684;&#x5F27;&#x5206;&#x89E3;(arc-factored)&#x65B9;&#x6CD5;[7.7&#x8282;]&#xFF1A;</p>
+<p>&#x7ED9;&#x5B9A;&#x4E86;&#x6709;n&#x4E2A;&#x8BCD;$w<em>{1:n}$&#x7684;&#x53E5;&#x5B50;&#x4EE5;&#x53CA;&#x5BF9;&#x5E94;&#x7684;&#x8BCD;&#x6027;&#x6807;&#x7B7E;$t</em>{1:n}$&#xFF0C;&#x7136;&#x540E;&#x9700;&#x8981;&#x4E3A;&#x6BCF;&#x4E00;&#x5BF9;&#x8BCD;$w_i,w_j$&#x8D4B;&#x4E88;&#x4E00;&#x4E2A;&#x5206;&#x6570;&#xFF0C;&#x8868;&#x793A;&#x8BCD;&#x8BED;$w_i$&#x662F;&#x8BCD;&#x8BED;$w_j$&#x7684;&#x6838;&#x5FC3;&#x8BCD;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x3002;</p>
+<p>&#x5728;8.6&#x8282;&#x6211;&#x4EEC;&#x4E3A;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x5BFC;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x7684;&#x7279;&#x5F81;&#x51FD;&#x6570;&#x3002;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x4E24;&#x4E2A;&#x53CC;&#x5411;RNN&#x7684;&#x5411;&#x91CF;&#x62FC;&#x63A5;&#x6240;&#x4EE3;&#x66FF;&#xFF1A;</p>
+<p>&#x7ED9;&#x5B9A;&#x4E86;&#x8BCD;&#x8BED;$w<em>{1:n}$&#x548C;&#x8BCD;&#x6027;&#x6807;&#x7B7E;$t</em>{1:n}$&#x4EE5;&#x53CA;&#x5BF9;&#x5E94;&#x7684;&#x7279;&#x5F81;&#x5411;&#x91CF;$\textbf{w}<em>{1:n}$&#x548C;$\textbf{t}</em>{1:n}$&#xFF0C;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x53CC;&#x5411;RNN&#x5F97;&#x5230;&#x7F16;&#x7801;$\textbf{v}_i$&#xFF0C;&#x8FD9;&#x4E2A;&#x7F16;&#x7801;&#x5BF9;&#x53E5;&#x5B50;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x8BCD;&#x5411;&#x91CF;&#x548C;&#x5BF9;&#x5E94;&#x7684;&#x8BCD;&#x6027;&#x6807;&#x7B7E;&#x5411;&#x91CF;&#x7684;&#x62FC;&#x63A5;&#x7ED3;&#x679C;&#x9001;&#x5165;&#x6DF1;&#x5EA6;&#x53CC;&#x5411;RNN&#x7684;&#x7F16;&#x7801;:</p>
+<p>$$
+\textbf{v}<em>{1:n} = \rm{biRNN}^*(\textbf{x}</em>{1:n})\
+\textbf{x}_i = [\textbf{w}_i;\textbf{t}_i]</p>
+<p>$$
+&#x7136;&#x540E;&#xFF0C;&#x5C06;&#x53CC;&#x5411;RNN&#x7684;&#x8F93;&#x51FA;&#x5411;&#x91CF;&#x62FC;&#x63A5;&#x9001;&#x5165;MLP&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5F97;&#x5230;&#x5BF9;&#x4E00;&#x4E2A;&#x6838;&#x5FC3;&#x8BCD;-&#x4FEE;&#x9970;&#x8BCD;&#x5019;&#x9009;&#x5BF9;&#x7684;&#x6253;&#x5206;&#xFF1A;</p>
+<p>$$
+\rm{A<em>{RC}S</em>{CORE}(\textbf{h},\textbf{m},w<em>{1:n},t</em>{1:n}) = MLP(\phi(\textbf{h,m,s})) = MLP([\textbf{v}_h;\textbf{v}_m])}</p>
+<p>$$
+<strong>&#x603B;&#x7ED3;&#xFF1A;</strong>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x5BF9;<strong>&#x8BCD;&#x8BED;&#x987A;&#x5E8F;</strong>&#x6216;&#x8005;<strong>&#x53E5;&#x5B50;&#x7ED3;&#x6784;</strong>&#x654F;&#x611F;&#xFF0C;&#x5E76;&#x4E14;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x4F7F;&#x7528;&#x8BCD;&#x8BED;&#x4F5C;&#x4E3A;&#x7279;&#x5F81;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x4E2D;&#x7684;&#x8BCD;&#x8BED;&#x5C31;&#x80FD;&#x591F;<strong>&#x88AB;&#x4F7F;&#x7528;&#x8BCD;&#x8BED;&#x81EA;&#x8EAB;&#x8BAD;&#x7EC3;&#x7684;&#x53CC;&#x5411;LSTM&#x8F93;&#x51FA;&#x7684;&#x8BCD;&#x5411;&#x91CF;&#x4EE3;&#x66FF;</strong>&#x3002;&#x3010;Kiperwasser&#x548C;Goldberg[2016b]&#x4EE5;&#x53CA;Cross&#x548C;Huang[2016a,b]&#x7684;&#x5173;&#x4E8E;&#x57FA;&#x4E8E;&#x8F6C;&#x79FB;&#x53E5;&#x6CD5;&#x5206;&#x6790;&#x4EFB;&#x52A1;&#x4E2D;&#x90FD;&#x6709;&#x4F7F;&#x7528;&#xFF0C;&#x5E76;&#x5F97;&#x5230;&#x4E86;&#x4EE4;&#x4EBA;&#x5370;&#x8C61;&#x6DF1;&#x523B;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x3011;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ch15.html" class="navigation navigation-prev " aria-label="Previous page: 第15章 实际的循环神经网络结构">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ch17.html" class="navigation navigation-next " aria-label="Next page: 第17章条件生成">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第16章 通过循环网络建模","level":"1.12","depth":1,"next":{"title":"第17章条件生成","level":"1.13","depth":1,"path":"ch17.md","ref":"ch17.md","articles":[]},"previous":{"title":"第15章 实际的循环神经网络结构","level":"1.11","depth":1,"path":"ch15.md","ref":"ch15.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch16.md","mtime":"2018-11-09T06:08:07.959Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T16:12:48.013Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

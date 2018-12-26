@@ -1,0 +1,505 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第19章 结构化输出预测 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="ch18.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch06.html">
+            
+                <a href="ch06.html">
+            
+                    
+                    第六章 文本特征构造
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch07.html">
+            
+                <a href="ch07.html">
+            
+                    
+                    第七章 NLP特征的案例分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch08.html">
+            
+                <a href="ch08.html">
+            
+                    
+                    第八章 从文本特征到输入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ch09.html">
+            
+                <a href="ch09.html">
+            
+                    
+                    第九章 语言模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="ch10.html">
+            
+                <a href="ch10.html">
+            
+                    
+                    第十章 预训练的词表示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ch11.html">
+            
+                <a href="ch11.html">
+            
+                    
+                    第11章 使用词嵌入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="ch12.html">
+            
+                <a href="ch12.html">
+            
+                    
+                    第12章 案例分析：一种用于句子意义推理的前馈结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="ch13.html">
+            
+                <a href="ch13.html">
+            
+                    
+                    第13章 n元语法探测器：卷积神经网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="ch14.html">
+            
+                <a href="ch14.html">
+            
+                    
+                    第14章 循环神经网络：序列和栈建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ch15.html">
+            
+                <a href="ch15.html">
+            
+                    
+                    第15章 实际的循环神经网络结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="ch16.html">
+            
+                <a href="ch16.html">
+            
+                    
+                    第16章 通过循环网络建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="ch17.html">
+            
+                <a href="ch17.html">
+            
+                    
+                    第17章条件生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="ch18.html">
+            
+                <a href="ch18.html">
+            
+                    
+                    第18章 用递归神经网络对树建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="ch19.html">
+            
+                <a href="ch19.html">
+            
+                    
+                    第19章 结构化输出预测
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第19章 结构化输出预测</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;19&#x7AE0;-&#x7ED3;&#x6784;&#x5316;&#x8F93;&#x51FA;&#x9884;&#x6D4B;">&#x7B2C;19&#x7AE0; &#x7ED3;&#x6784;&#x5316;&#x8F93;&#x51FA;&#x9884;&#x6D4B;</h1>
+<p>&#x5728;&#x81EA;&#x7136;&#x8BED;&#x8A00;&#x5904;&#x7406;&#x4E2D;&#x7684;&#x8BB8;&#x591A;&#x4EFB;&#x52A1;&#x6D89;&#x53CA;&#x7ED3;&#x6784;&#x5316;&#x8F93;&#x51FA;&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x4EFB;&#x52A1;&#x4E2D;&#x6211;&#x4EEC;&#x671F;&#x671B;&#x5F97;&#x5230;&#x7684;&#x8F93;&#x51FA;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x7C7B;&#x6807;&#x7B7E;&#x6216;&#x8005;&#x7C7B;&#x6807;&#x7B7E;&#x7684;&#x5206;&#x5E03;&#xFF0C;<u>&#x800C;&#x662F;&#x4E00;&#x4E2A;&#x5982;&#x5E8F;&#x5217;&#x3001;&#x6811;&#x6216;&#x8005;&#x56FE;&#x7684;&#x7ED3;&#x6784;&#x5316;&#x5BF9;&#x8C61;&#x3002;</u></p>
+<p>&#x5178;&#x578B;&#x7684;&#x4EFB;&#x52A1;&#x5305;&#x62EC;&#x5E8F;&#x5217;&#x6807;&#x6CE8;(&#x4F8B;&#x5982;&#x8BCD;&#x6027;&#x6807;&#x6CE8;)&#x3001;&#x5E8F;&#x5217;&#x5206;&#x5272;(&#x4F8B;&#x5982;&#x7EC4;&#x5757;&#x5206;&#x6790;&#x548C;&#x547D;&#x540D;&#x5B9E;&#x4F53;&#x8BC6;&#x522B;)&#x3001;&#x53E5;&#x6CD5;&#x5206;&#x6790;&#x4EE5;&#x53CA;&#x673A;&#x5668;&#x7FFB;&#x8BD1;&#x3002;</p>
+<p>&#x672C;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x8BA8;&#x8BBA;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x6A21;&#x578B;&#x5728;&#x7ED3;&#x6784;&#x5316;&#x4EFB;&#x52A1;&#x4E2D;&#x7684;&#x5E94;&#x7528;&#x3002;</p>
+<h2 id="191-&#x57FA;&#x4E8E;&#x641C;&#x7D22;&#x7684;&#x7ED3;&#x6784;&#x5316;&#x9884;&#x6D4B;">19.1 &#x57FA;&#x4E8E;&#x641C;&#x7D22;&#x7684;&#x7ED3;&#x6784;&#x5316;&#x9884;&#x6D4B;</h2>
+<p>&#x7ED3;&#x6784;&#x5316;&#x9884;&#x6D4B;&#x4E00;&#x822C;&#x91C7;&#x7528;&#x57FA;&#x4E8E;&#x641C;&#x7D22;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x57FA;&#x4E8E;&#x641C;&#x7D22;&#x7684;&#x7ED3;&#x6784;&#x5316;&#x9884;&#x6D4B;&#x53EF;&#x4EE5;&#x88AB;&#x5F62;&#x5F0F;&#x5316;&#x4E3A;&#x5728;&#x53EF;&#x80FD;&#x7684;&#x7ED3;&#x6784;&#x4E2D;&#x8FDB;&#x884C;&#x641C;&#x7D22;&#x7684;&#x95EE;&#x9898;&#xFF1A;</p>
+<p>$$
+\mathrm{predict(x) = argmax<em>{y\in y(x)} score</em>{global}(x,y)} \tag{19.1}</p>
+<p>$$
+&#x5176;&#x4E2D;&#xFF0C;x&#x662F;&#x8F93;&#x5165;&#x7ED3;&#x6784;&#xFF0C;y&#x662F;&#x5BF9;&#x5E94;&#x7684;&#x8F93;&#x51FA;(<u>&#x5728;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;x&#x662F;&#x4E00;&#x4E2A;&#x53E5;&#x5B50;&#xFF0C;&#x800C;y&#x662F;&#x8BE5;&#x53E5;&#x5B50;&#x4E0A;&#x7684;&#x6807;&#x7B7E;&#x8D4B;&#x503C;&#x6216;&#x8005;&#x53E5;&#x6CD5;&#x6811;&#x3002;</u>)&#xFF0C;$y(x)$&#x662F;&#x5728;x&#x4E0A;&#x6240;&#x6709;&#x6709;&#x6548;&#x8F93;&#x51FA;&#x7ED3;&#x6784;&#x7684;&#x96C6;&#x5408;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5E0C;&#x671B;<strong>&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x8F93;&#x51FA;y&#xFF0C;&#x4F7F;&#x5F97;x&#xFF0C;y&#x7EC4;&#x5408;&#x7684;&#x5206;&#x503C;&#x6700;&#x5927;</strong>&#x3002;</p>
+<h3 id="1911-&#x57FA;&#x4E8E;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#x7684;&#x7ED3;&#x6784;&#x5316;&#x9884;&#x6D4B;">19.1.1 &#x57FA;&#x4E8E;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#x7684;&#x7ED3;&#x6784;&#x5316;&#x9884;&#x6D4B;</h3>
+<p>&#x8BC4;&#x5206;&#x51FD;&#x6570;&#x5EFA;&#x6A21;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x7EBF;&#x6027;&#x51FD;&#x6570;:</p>
+<p>$$
+\mathrm{score_{global}(x,y) = w.\Phi(x,y)} \tag{19.2}</p>
+<p>$$
+&#x5176;&#x4E2D;$\Phi$&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x5F81;&#x62BD;&#x53D6;&#x51FD;&#x6570;&#xFF0C;w&#x662F;&#x4E00;&#x4E2A;&#x6743;&#x91CD;&#x5411;&#x91CF;&#x3002;</p>
+<p><strong>&#x4E3A;&#x4E86;&#x662F;&#x5BF9;&#x4E8E;&#x6700;&#x4F18;&#x8F93;&#x51FA;y&#x7684;&#x641C;&#x7D22;&#x6210;&#x4E3A;&#x53EF;&#x884C;</strong>&#xFF0C;&#x5C06;&#x7ED3;&#x6784;y&#x5206;&#x89E3;&#x6210;&#x5C0F;&#x7684;&#x90E8;&#x5206;(&#x5B50;&#x7ED3;&#x6784;)&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x8FD9;&#x4E9B;&#x5B50;&#x7ED3;&#x6784;&#x6765;&#x5B9A;&#x4E49;&#x7279;&#x5F81;&#x51FD;&#x6570;&#x3002;&#x5982;&#x4E0B;&#x5F0F;&#x6240;&#x793A;&#xFF0C;$\phi(p)$&#x662F;&#x5BF9;&#x4E8E;&#x5B50;&#x7ED3;&#x6784;&#x8FDB;&#x884C;&#x7279;&#x5F81;&#x62BD;&#x53D6;&#x7684;&#x51FD;&#x6570;&#xFF1A;</p>
+<p>$$
+\mathrm{\Phi(x,y) = \sum_{p\in parts(x,y)} \phi(p)} \tag{19.3}</p>
+<p>$$
+&#x6BCF;&#x4E2A;&#x5B50;&#x7ED3;&#x6784;&#x7684;&#x5206;&#x503C;&#x5355;&#x72EC;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#xFF0C;&#x6574;&#x4E2A;&#x7ED3;&#x6784;&#x7684;&#x5206;&#x503C;&#x5219;&#x4E3A;&#x6240;&#x6709;&#x5B50;&#x7ED3;&#x6784;&#x5206;&#x503C;&#x4E4B;&#x548C;:</p>
+<p>$$
+\begin{aligned}
+\mathrm{score<em>{global}(x,y)} &amp;= w.\Phi(x,y)\
+&amp;=\mathrm{w.\sum</em>{p\in parts(x,y)} \phi(p)}\
+&amp;= \sum<em>{p\in y} w.\phi(p) \
+&amp;= \mathrm{\sum</em>{p \in y} score_{global}(p)}
+\end{aligned}
+\tag{19.4}</p>
+<p>$$
+<u>&#x4E4B;&#x6240;&#x4EE5;&#x5BF9;y&#x8FDB;&#x884C;&#x5206;&#x89E3;&#xFF0C;&#x662F;&#x4E3A;&#x4E86;&#x627E;&#x5230;&#x4E00;&#x79CD;&#x63A8;&#x65AD;&#x7B97;&#x6CD5;&#xFF0C;&#x4F7F;&#x5F97;&#x5728;&#x7ED9;&#x5B9A;&#x6BCF;&#x4E2A;&#x90E8;&#x5206;&#x7684;&#x5206;&#x503C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x80FD;&#x591F;&#x9AD8;&#x6548;&#x5730;&#x641C;&#x7D22;&#x5206;&#x503C;&#x6700;&#x9AD8;&#x7684;&#x7ED3;&#x6784;&#x3002;</u></p>
+<h3 id="1912-&#x975E;&#x7EBF;&#x6027;&#x7ED3;&#x6784;&#x5316;&#x9884;&#x6D4B;">19.1.2 &#x975E;&#x7EBF;&#x6027;&#x7ED3;&#x6784;&#x5316;&#x9884;&#x6D4B;</h3>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x5C06;&#x5B50;&#x7ED3;&#x6784;&#x4E0A;&#x7684;&#x7EBF;&#x6027;&#x8BC4;&#x5206;&#x51FD;&#x6570;&#x7528;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x6765;&#x4EE3;&#x66FF;:</p>
+<p>$$
+\mathrm{score<em>{global}(x,y) = \sum</em>{p\in y}score<em>{global}(p) = \sum</em>{p\in y}NN(\phi(p))} \tag{19.5}</p>
+<p>$$
+&#x5176;&#x4E2D;$\phi(p)$&#x5C06;&#x5B50;&#x7ED3;&#x6784;p&#x6620;&#x5C04;&#x4E3A;$d_{in}$&#x7EF4;&#x5411;&#x91CF;&#x3002;</p>
+<p><strong>&#x7ED3;&#x6784;&#x5316;&#x9884;&#x6D4B;&#x4E2D;&#x7684;&#x5E38;&#x7528;&#x76EE;&#x6807;&#x662F;&#x4F7F;&#x5F97;&#x6B63;&#x786E;&#x7ED3;&#x6784;y&#x7684;&#x5206;&#x503C;&#x6BD4;&#x5176;&#x4ED6;&#x6240;&#x6709;&#x9519;&#x8BEF;&#x7ED3;&#x6784;$y^{&apos;}$&#x7684;&#x5206;&#x503C;&#x66F4;&#x9AD8;</strong>&#xFF0C;&#x4ECE;&#x800C;&#x6709;&#x5982;&#x4E0B;&#x635F;&#x5931;&#x51FD;&#x6570;(&#x5E7F;&#x4E49;&#x611F;&#x77E5;&#x673A;[collins 2002]):</p>
+<p>$$
+\mathrm{\max<em>{y^{&apos;}} score</em>{global}(x,y^{&apos;})-score_{global}(x,y)} \tag{19.6}</p>
+<p>$$
+&#x8BE5;&#x6700;&#x5927;&#x5316;&#x8FC7;&#x7A0B;&#x901A;&#x5E38;&#x4F7F;&#x7528;&#x57FA;&#x4E8E;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x6216;&#x7C7B;&#x4F3C;&#x7684;&#x641C;&#x7D22;&#x7B97;&#x6CD5;&#x6765;&#x5B9E;&#x73B0;&#x3002;</p>
+<p>&#x5728;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x4E0A;&#xFF0C;&#x9996;&#x5148;&#xFF0C;&#x4E3A;&#x6BCF;&#x4E2A;&#x53EF;&#x80FD;&#x7684;&#x5B50;&#x7ED3;&#x6784;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x8BA1;&#x7B97;&#x56FE;$CG_p$&#xFF0C;&#x5E76;&#x8BA1;&#x7B97;&#x5B83;&#x7684;&#x5206;&#x503C;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x6839;&#x636E;&#x6BCF;&#x4E2A;&#x5B50;&#x7ED3;&#x6784;&#x7684;&#x5206;&#x503C;&#x8FDB;&#x884C;&#x63A8;&#x65AD;(&#x5373;&#x641C;&#x7D22;)&#x4EE5;&#x627E;&#x5230;&#x5206;&#x503C;&#x6700;&#x9AD8;&#x7684;&#x7ED3;&#x6784;$y^{&apos;}$&#x3002;&#x63A5;&#x7740;&#xFF0C;&#x5C06;&#x8BA1;&#x7B97;&#x56FE;&#x4E2D;&#x6B63;&#x786E;(&#x9884;&#x6D4B;)&#x7ED3;&#x6784;y($y^{&apos;}$)&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x5404;&#x4E2A;&#x5B50;&#x7ED3;&#x6784;&#x7684;&#x8F93;&#x51FA;&#x8282;&#x70B9;&#x76F8;&#x52A0;&#xFF0C;&#x4ECE;&#x800C;&#x5F97;&#x5230;&#x8868;&#x793A;&#x603B;&#x5206;&#x503C;&#x7684;&#x7ED3;&#x70B9;$CG_y(CG^{&apos;}_y)$&#x3002;&#x4E0B;&#x4E00;&#x6B65;&#xFF0C;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x201C;&#x51CF;&#x6CD5;&#x201D;&#x7ED3;&#x70B9;&#x8FDE;&#x63A5;$CG_y$&#x548C;$CG^{&apos;}_y$&#xFF0C;&#x5F97;&#x5230;$CG_l$&#x3002;&#x6700;&#x540E;&#x8BA1;&#x7B97;&#x68AF;&#x5EA6;&#x3002;</p>
+<p><strong>&#x5E7F;&#x4E49;&#x611F;&#x77E5;&#x673A;&#x6CA1;&#x6709;&#x8003;&#x8651;&#x6B63;&#x8D1F;&#x6837;&#x4F8B;&#x4E4B;&#x95F4;&#x7684;&#x95F4;&#x9694;(margin)</strong>&#xFF0C;&#x57FA;&#x4E8E;&#x95F4;&#x9694;&#x7684;hinge&#x635F;&#x5931;&#x5219;&#x66F4;&#x9002;&#x5408;:</p>
+<p>$$
+\mathrm{max(0,m+max<em>{y^{&apos;}\ne y} score</em>{global}(x,y^{&apos;})-score_{global}(x,y))} \tag{19.8}</p>
+<p>$$</p>
+<p><strong>&#x4EE3;&#x4EF7;&#x589E;&#x5F3A;&#x8BAD;&#x7EC3;</strong></p>
+<p>&#x5728;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x635F;&#x5931;&#x51FD;&#x6570;&#x3001;&#x6B63;&#x5219;&#x5316;&#x4EE5;&#x53CA;Smith[2011]&#x4E2D;&#x6240;&#x4ECB;&#x7ECD;&#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x80FD;&#x591F;&#x5F88;&#x5BB9;&#x6613;&#x5730;&#x8FC1;&#x79FB;&#x5230;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x6846;&#x67B6;&#x4E2D;&#xFF0C;&#x5C3D;&#x7BA1;&#x4E22;&#x5931;&#x4E86;&#x6A21;&#x578B;&#x7684;&#x51F8;&#x6027;&#x4EE5;&#x53CA;&#x4E0E;&#x4E4B;&#x76F8;&#x5173;&#x7684;&#x5F88;&#x591A;&#x7406;&#x8BBA;&#x4FDD;&#x8BC1;&#x3002;</p>
+<p><strong>&#x95EE;&#x9898;&#xFF1A;</strong>&#x5F0F;(19.6)&#x548C;&#x5F0F;(19.8)&#x5728;&#x6700;&#x5927;&#x5316;&#x8FC7;&#x7A0B;&#x4E2D;&#x6781;&#x6709;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x68AF;&#x5EA6;&#x6D88;&#x5931;&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<p><strong>&#x89E3;&#x51B3;&#x65B9;&#x6848;:</strong>&#x4EE3;&#x4EF7;&#x589E;&#x5F3A;&#x8BAD;&#x7EC3;&#x65B9;&#x6CD5;&#x7684;&#x4E3B;&#x8981;&#x601D;&#x60F3;&#x662F;&#x4FEE;&#x6539;&#x6700;&#x5927;&#x5316;&#x8FC7;&#x7A0B;&#xFF0C;&#x4F7F;&#x6211;&#x4EEC;&#x5728;&#x5BFB;&#x627E;&#x7ED3;&#x6784;$y^{&apos;}$&#x65F6;&#xFF0C;&#x4E0D;&#x4EC5;&#x8981;&#x6C42;&#x5B83;&#x5728;&#x5F53;&#x524D;&#x6A21;&#x578B;&#x4E0B;&#x5206;&#x503C;&#x8F83;&#x9AD8;&#xFF0C;&#x8FD8;&#x8981;&#x4F7F;&#x5F97;&#x5B83;&#x6709;&#x76F8;&#x5BF9;&#x591A;&#x7684;&#x9519;&#x8BEF;&#x6210;&#x5206;(&#x5B50;&#x7ED3;&#x6784;)&#x3002;&#x5F62;&#x5F0F;&#x4E0A;&#xFF0C;hinge&#x76EE;&#x6807;&#x51FD;&#x6570;&#x53D8;&#x4E3A;:</p>
+<p>$$
+\mathrm{max(0,m+max<em>{y^{&apos;}\ne y}(score</em>{global}(x,y^{&apos;})+\alpha \Delta(y,y^{&apos;}))-score_{global}(x,y))} \tag{19.9}</p>
+<p>$$
+&#x5176;&#x4E2D;$\alpha$&#x662F;&#x7528;&#x6765;&#x8868;&#x793A;$\Delta$&#x4E0E;&#x6A21;&#x578B;&#x5206;&#x503C;&#x4E4B;&#x95F4;&#x76F8;&#x5BF9;&#x91CD;&#x8981;&#x6027;&#x7684;&#x8D85;&#x53C2;&#x6570;(&#x6807;&#x91CF;)&#xFF0C;$\Delta(y,y^{&apos;})$&#x5219;&#x4E3A;&#x8BA1;&#x7B97;$y^{&apos;}$&#x4E0E;y&#x4E4B;&#x95F4;&#x4E0D;&#x540C;&#x5B50;&#x7ED3;&#x6784;&#x6570;&#x76EE;&#x7684;&#x51FD;&#x6570;:</p>
+<p>$$
+\Delta(y,y^{&apos;}) = |{p:p\in y^{&apos;},p\notin y}| \tag{19.10}</p>
+<p>$$
+&#x5728;&#x5B9E;&#x9645;&#x7684;&#x8BAD;&#x7EC3;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x901A;&#x5E38;&#x901A;&#x8FC7;&#x589E;&#x52A0;$\alpha$&#x6765;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x76EE;&#x6807;&#x7684;&#x6709;&#x6548;&#x6027;&#x3002;</p>
+<p>&#x4EE3;&#x4EF7;&#x589E;&#x5F3A;&#x63A8;&#x65AD;&#x503E;&#x5411;&#x4E8E;&#x627E;&#x51FA;&#x9519;&#x8BEF;&#x8F83;&#x591A;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x4EE5;&#x4FDD;&#x7559;&#x66F4;&#x591A;&#x4E0D;&#x4F1A;&#x88AB;&#x62B5;&#x6D88;&#x7684;&#x635F;&#x5931;&#x9879;&#xFF0C;&#x8FDB;&#x800C;&#x5E26;&#x6765;&#x66F4;&#x6709;&#x6548;&#x7684;&#x68AF;&#x5EA6;&#x66F4;&#x65B0;&#x3002;</p>
+<h3 id="1913-&#x6982;&#x7387;&#x76EE;&#x6807;&#x51FD;&#x6570;crf">19.1.3 &#x6982;&#x7387;&#x76EE;&#x6807;&#x51FD;&#x6570;(CRF)</h3>
+<p>&#x57FA;&#x4E8E;&#x9519;&#x8BEF;&#x7684;&#x548C;&#x57FA;&#x4E8E;&#x95F4;&#x9694;&#x7684;&#x635F;&#x5931;&#x51FD;&#x6570;&#x90FD;&#x5728;&#x8BD5;&#x56FE;&#x4F7F;&#x6B63;&#x786E;&#x7ED3;&#x6784;&#x7684;&#x5206;&#x503C;&#x9AD8;&#x4E8E;&#x9519;&#x8BEF;&#x7ED3;&#x6784;&#xFF0C;<strong>&#x4F46;&#x4E0D;&#x5173;&#x5FC3;&#x5728;&#x5206;&#x503C;&#x6700;&#x9AD8;&#x7684;&#x7ED3;&#x6784;&#x4E4B;&#x5916;&#x7684;&#x5176;&#x4ED6;&#x7ED3;&#x6784;&#x4E4B;&#x95F4;&#x7684;&#x5206;&#x503C;&#x6392;&#x5E8F;&#x6216;&#x8005;&#x5206;&#x503C;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x8DDD;</strong>&#x3002;</p>
+<p>&#x5224;&#x522B;&#x5F0F;&#x6982;&#x7387;&#x635F;&#x5931;&#x5219;&#x4E3A;&#x7ED9;&#x5B9A;&#x8F93;&#x5165;&#x4E0B;&#x7684;&#x6BCF;&#x4E2A;&#x53EF;&#x80FD;&#x7684;&#x7ED3;&#x6784;&#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x6982;&#x7387;&#xFF0C;&#x5E76;&#x6700;&#x5927;&#x5316;&#x6B63;&#x786E;&#x7ED3;&#x6784;&#x7684;&#x6982;&#x7387;&#x3002;&#x6982;&#x7387;&#x635F;&#x5931;&#x8003;&#x8651;&#x4E86;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x7ED3;&#x6784;&#x7684;&#x5206;&#x503C;&#xFF0C;&#x800C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x5206;&#x503C;&#x6700;&#x9AD8;&#x7684;&#x7ED3;&#x6784;&#x3002;</p>
+<p>&#x5728;&#x6982;&#x7387;&#x6846;&#x67B6;(&#x4E5F;&#x53EB;&#x505A;&#x6761;&#x4EF6;&#x968F;&#x673A;&#x573A;&#xFF0C;CRF)&#x4E0B;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x5B50;&#x7ED3;&#x6784;&#x7684;&#x5F97;&#x5206;&#x88AB;&#x770B;&#x505A;&#x662F;&#x4E00;&#x4E2A;&#x56E2;&#x52BF;&#x51FD;&#x6570;&#xFF0C;&#x5219;&#x6BCF;&#x4E2A;&#x7ED3;&#x6784;y&#x7684;&#x5206;&#x503C;&#x53EF;&#x5B9A;&#x4E49;&#x4E3A;:</p>
+<p>$$
+\begin{aligned}
+\mathrm{score<em>{CRF}(x,y) = P(y|x) } &amp;= \mathrm{\frac{e^{score</em>{global}(x,y)}}{\sum<em>{y^{&apos;}\in y(x)} e^{score</em>{global}(x,y^{&apos;})}}} \
+&amp;= \mathrm{\frac{exp(\sum<em>{p\in y}score</em>{lobal}(p))}{\sum<em>{y^{&apos;}\in y(x)} exp(\sum</em>{p\in y^{&apos;}}score<em>{local}(p))}} \
+&amp;= \mathrm{\frac{exp(\sum</em>{p\in y}NN(\phi(p)))}{\sum<em>{y^{&apos;}\in y(x)} exp(\sum</em>{p\in y^{&apos;}}NN(\phi(p)))}}
+\end{aligned}
+\tag{19.11}</p>
+<p>$$
+&#x8BE5;&#x8BC4;&#x5206;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;&#x6982;&#x7387;&#x5206;&#x5E03;$P(y|x)$&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684;&#x8BAD;&#x7EC3;&#x6837;&#x672C;(x,y)&#xFF0C;&#x5176;&#x635F;&#x5931;&#x5219;&#x4E3A;:</p>
+<p>$$
+\mathrm{L<em>{CRF}(y^{&apos;},y) = - \log score</em>{CRF}(x,y)} \tag{19.12}</p>
+<p>$$
+CRF&#x635F;&#x5931;&#x53EF;&#x4EE5;&#x770B;&#x6210;&#x662F;(&#x786C;)&#x5206;&#x7C7B;(hard-classification)&#x95EE;&#x9898;&#x7684;&#x4EA4;&#x53C9;&#x71B5;&#x635F;&#x5931;&#x5728;&#x7ED3;&#x6784;&#x5316;&#x9884;&#x6D4B;&#x95EE;&#x9898;&#x4E0A;&#x7684;&#x6269;&#x5C55;&#x3002;</p>
+<h3 id="1914-&#x8FD1;&#x4F3C;&#x641C;&#x7D22;">19.1.4 &#x8FD1;&#x4F3C;&#x641C;&#x7D22;</h3>
+<p>&#x5BF9;&#x4E8E;&#x67D0;&#x4E2A;&#x9884;&#x6D4B;&#x95EE;&#x9898;&#x5E76;&#x4E0D;&#x5B58;&#x5728;&#x9AD8;&#x6548;&#x7684;&#x641C;&#x7D22;&#x7B97;&#x6CD5;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x91C7;&#x7528;&#x8FD1;&#x4F3C;&#x63A8;&#x65AD;&#x7B97;&#x6CD5;&#xFF0C;&#x5982;&#x67F1;&#x641C;&#x7D22;(beam search)&#x3002;</p>
+<h3 id="1915-&#x91CD;&#x6392;&#x5E8F;">19.1.5 &#x91CD;&#x6392;&#x5E8F;</h3>
+<p>&#x5728;&#x91CD;&#x6392;&#x5E8F;&#x6846;&#x67B6;&#x4E2D;&#xFF0C;&#x9996;&#x5148;&#xFF0C;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x57FA;&#x7840;&#x6A21;&#x5757;&#x83B7;&#x5F97;&#x5206;&#x503C;&#x6700;&#x9AD8;&#x7684;k&#x4E2A;&#x5019;&#x9009;&#x7ED3;&#x6784;(k-best)&#x3002;&#x7136;&#x540E;&#xFF0C;&#x518D;&#x8BAD;&#x7EC3;&#x4E00;&#x4E2A;&#x66F4;&#x52A0;&#x590D;&#x6742;&#x7684;&#x6A21;&#x578B;&#x4E3A;&#x8FD9;k&#x4E2A;&#x5019;&#x9009;&#x7ED3;&#x6784;&#x91CD;&#x65B0;&#x8BC4;&#x5206;&#xFF0C;&#x4F7F;&#x5F97;&#x5176;&#x4E2D;&#x6B63;&#x786E;&#x7684;&#x7ED3;&#x6784;&#x5206;&#x503C;&#x6700;&#x9AD8;&#x3002;</p>
+<h3 id="1916-&#x53C2;&#x8003;&#x9605;&#x8BFB;">19.1.6 &#x53C2;&#x8003;&#x9605;&#x8BFB;</h3>
+<p>&#xFF08;&#x7565;&#xFF09;</p>
+<h2 id="192-&#x8D2A;&#x5FC3;&#x7ED3;&#x6784;&#x5316;&#x9884;&#x6D4B;">19.2 &#x8D2A;&#x5FC3;&#x7ED3;&#x6784;&#x5316;&#x9884;&#x6D4B;</h2>
+<p>&#x8D2A;&#x5FC3;&#x65B9;&#x6CD5;&#x5C06;&#x7ED3;&#x6784;&#x5316;&#x9884;&#x6D4B;&#x95EE;&#x9898;&#x5206;&#x89E3;&#x4E3A;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x5C40;&#x90E8;&#x9884;&#x6D4B;&#x95EE;&#x9898;&#xFF0C;&#x5E76;&#x8BAD;&#x7EC3;&#x4E00;&#x4E2A;&#x5206;&#x7C7B;&#x5668;&#x6765;&#x5B8C;&#x6210;&#x597D;&#x6BCF;&#x4E00;&#x4E2A;&#x5C40;&#x90E8;&#x7684;&#x51B3;&#x7B56;&#x3002;</p>
+<p>&#x5728;&#x6D4B;&#x8BD5;&#x9636;&#x6BB5;&#xFF0C;&#x4EE5;&#x8D2A;&#x5FC3;&#x7684;&#x65B9;&#x5F0F;&#x4F7F;&#x7528;&#x8BE5;&#x5206;&#x7C7B;&#x5668;&#x3002;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x7684;&#x5178;&#x578B;&#x5B9E;&#x4F8B;&#xFF0C;&#x6709;&#x81EA;&#x5DE6;&#x5411;&#x53F3;&#x7684;&#x5E8F;&#x5217;&#x6807;&#x6CE8;&#x6A21;&#x578B;[Gimenez and Marquez,2004]&#x4EE5;&#x53CA;&#x57FA;&#x4E8E;&#x8F6C;&#x79FB;&#x7684;&#x8D2A;&#x5FC3;&#x53E5;&#x6CD5;&#x5206;&#x6790;[Nivre,2008]&#x3002;</p>
+<p>&#x6839;&#x636E;&#x5B9A;&#x4E49;&#xFF0C;&#x8D2A;&#x5FC3;&#x65B9;&#x6CD5;&#x662F;&#x542F;&#x53D1;&#x5F0F;&#x7684;&#xFF0C;&#x5B83;&#x53EF;&#x80FD;&#x4F1A;&#x53D7;&#x5230;&#x9519;&#x8BEF;&#x4F20;&#x64AD;(error-propagation)&#x7684;&#x5F71;&#x54CD;&#xFF0C;&#x5373;&#x51B3;&#x7B56;&#x5E8F;&#x5217;&#x65E9;&#x671F;&#x7684;&#x9884;&#x6D4B;&#x9519;&#x8BEF;&#x65E0;&#x6CD5;&#x5F97;&#x5230;&#x4FEE;&#x6B63;&#xFF0C;&#x800C;&#x4E14;&#x4F1A;&#x5411;&#x540E;&#x4F20;&#x9012;&#x4ECE;&#x800C;&#x5BFC;&#x81F4;&#x66F4;&#x5927;&#x7684;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x57FA;&#x4E8E;biRNN&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x5668;&#x8BAD;&#x7EC3;&#x7684;&#x8D2A;&#x5FC3;&#x5C40;&#x90E8;&#x6A21;&#x578B;&#x6210;&#x4E3A;&#x4E86;&#x8D2A;&#x5FC3;&#x5168;&#x5C40;&#x6A21;&#x578B;:&#x6BCF;&#x4E2A;&#x51B3;&#x7B56;&#x90FD;&#x5C06;&#x53C2;&#x8003;&#x6574;&#x4E2A;&#x53E5;&#x5B50;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x4F7F;&#x5F97;&#x51B3;&#x7B56;&#x8FC7;&#x7A0B;&#x4E0D;&#x592A;&#x5BB9;&#x6613;&#x56E0;&#x610F;&#x6599;&#x4E4B;&#x5916;&#x7684;&#x8F93;&#x51FA;&#x800C;&#x611F;&#x5230;&quot;&#x60CA;&#x8BB6;&quot;&#x3002;</p>
+<p>&#x5728;&#x53E5;&#x6CD5;&#x5206;&#x6790;&#x4E0A;&#x7684;&#x7814;&#x7A76;&#x8868;&#x660E;&#xFF0C;&#x57FA;&#x4E8E;&#x5168;&#x5C40;biRNN&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x5668;&#x8BAD;&#x7EC3;&#x7684;&#x8D2A;&#x5FC3;&#x9884;&#x6D4B;&#x6A21;&#x578B;&#x4E0E;&#x7ED3;&#x5408;&#x5168;&#x5C40;&#x641C;&#x7D22;&#x548C;&#x5C40;&#x90E8;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x5668;&#x7684;&#x57FA;&#x4E8E;&#x641C;&#x7D22;&#x7684;&#x6A21;&#x578B;&#x51C6;&#x786E;&#x6027;&#x76F8;&#x5F53;[Cross and Huang,2016a, Dyer et al.,2015]</p>
+<h2 id="193-&#x6761;&#x4EF6;&#x751F;&#x6210;&#x4E0E;&#x7ED3;&#x6784;&#x5316;&#x8F93;&#x51FA;&#x9884;&#x6D4B;">19.3 &#x6761;&#x4EF6;&#x751F;&#x6210;&#x4E0E;&#x7ED3;&#x6784;&#x5316;&#x8F93;&#x51FA;&#x9884;&#x6D4B;</h2>
+<h2 id="194-&#x793A;&#x4F8B;">19.4 &#x793A;&#x4F8B;</h2>
+<h3 id="1941-&#x57FA;&#x4E8E;&#x641C;&#x7D22;&#x7684;&#x7ED3;&#x6784;&#x5316;&#x9884;&#x6D4B;&#xFF1A;&#x4E00;&#x9636;&#x4F9D;&#x5B58;&#x53E5;&#x6CD5;&#x5206;&#x6790;">19.4.1 &#x57FA;&#x4E8E;&#x641C;&#x7D22;&#x7684;&#x7ED3;&#x6784;&#x5316;&#x9884;&#x6D4B;&#xFF1A;&#x4E00;&#x9636;&#x4F9D;&#x5B58;&#x53E5;&#x6CD5;&#x5206;&#x6790;</h3>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ch18.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 第18章 用递归神经网络对树建模">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第19章 结构化输出预测","level":"1.15","depth":1,"previous":{"title":"第18章 用递归神经网络对树建模","level":"1.14","depth":1,"path":"ch18.md","ref":"ch18.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch19.md","mtime":"2018-11-15T09:37:34.244Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T16:12:48.013Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

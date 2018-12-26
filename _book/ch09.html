@@ -1,0 +1,563 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第九章 语言模型 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ch10.html" />
+    
+    
+    <link rel="prev" href="ch08.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch06.html">
+            
+                <a href="ch06.html">
+            
+                    
+                    第六章 文本特征构造
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch07.html">
+            
+                <a href="ch07.html">
+            
+                    
+                    第七章 NLP特征的案例分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch08.html">
+            
+                <a href="ch08.html">
+            
+                    
+                    第八章 从文本特征到输入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="ch09.html">
+            
+                <a href="ch09.html">
+            
+                    
+                    第九章 语言模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="ch10.html">
+            
+                <a href="ch10.html">
+            
+                    
+                    第十章 预训练的词表示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ch11.html">
+            
+                <a href="ch11.html">
+            
+                    
+                    第11章 使用词嵌入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="ch12.html">
+            
+                <a href="ch12.html">
+            
+                    
+                    第12章 案例分析：一种用于句子意义推理的前馈结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="ch13.html">
+            
+                <a href="ch13.html">
+            
+                    
+                    第13章 n元语法探测器：卷积神经网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="ch14.html">
+            
+                <a href="ch14.html">
+            
+                    
+                    第14章 循环神经网络：序列和栈建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ch15.html">
+            
+                <a href="ch15.html">
+            
+                    
+                    第15章 实际的循环神经网络结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="ch16.html">
+            
+                <a href="ch16.html">
+            
+                    
+                    第16章 通过循环网络建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="ch17.html">
+            
+                <a href="ch17.html">
+            
+                    
+                    第17章条件生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="ch18.html">
+            
+                <a href="ch18.html">
+            
+                    
+                    第18章 用递归神经网络对树建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="ch19.html">
+            
+                <a href="ch19.html">
+            
+                    
+                    第19章 结构化输出预测
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第九章 语言模型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;&#x4E5D;&#x7AE0;-&#x8BED;&#x8A00;&#x6A21;&#x578B;">&#x7B2C;&#x4E5D;&#x7AE0; &#x8BED;&#x8A00;&#x6A21;&#x578B;</h1>
+<p>&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x662F;&#x7ED9;&#x4E00;&#x4E2A;&#x53E5;&#x5B50;&#x5206;&#x914D;&#x6982;&#x7387;&#x7684;&#x4EFB;&#x52A1;.&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x4E5F;&#x5BF9;&#x7ED9;&#x5B9A;&#x5355;&#x8BCD;&#x5728;&#x4E00;&#x4E2A;&#x8BCD;&#x5E8F;&#x5217;&#x4E4B;&#x540E;&#x51FA;&#x73B0;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x5206;&#x914D;&#x6982;&#x7387;.</p>
+<p>&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x5728;&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x4E2D;&#x7684;&#x5E94;&#x7528;&#x4E2D;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x51B3;&#x5B9A;&#x6027;&#x7684;&#x7EC4;&#x4EF6;.&#x4F8B;&#x5982;&#x673A;&#x5668;&#x7FFB;&#x8BD1;&#x548C;&#x81EA;&#x52A8;&#x8BED;&#x97F3;&#x8BC6;&#x522B;,&#x5176;&#x4E2D;&#x7CFB;&#x7EDF;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E9B;&#x7FFB;&#x8BD1;&#x6216;&#x8F6C;&#x5199;,&#x4E4B;&#x540E;&#x5C06;<strong>&#x901A;&#x8FC7;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x8FDB;&#x884C;&#x6253;&#x5206;</strong>.</p>
+<p>&#x6B63;&#x5F0F;&#x6765;&#x8BB2;,&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x5C31;&#x662F;&#x7ED9;&#x4EFB;&#x4F55;&#x8BCD;&#x5E8F;&#x5217;$w<em>{1;n}$&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x6982;&#x7387;,&#x4E5F;&#x5C31;&#x662F;$P(w</em>{1;n})$.&#x901A;&#x8FC7;&#x6982;&#x7387;&#x7684;<strong>&#x94FE;&#x5F0F;&#x6CD5;&#x5219;</strong>&#x5219;&#x53EF;&#x4EE5;&#x5199;&#x6210;&#x5982;&#x4E0B;&#x5F62;&#x5F0F;:</p>
+<p>$$
+P(w<em>{1;n}) = P(w_1)P(w_2|w_1)P(w_3|w</em>{1;2})P(w<em>4|w</em>{1;3})...P(w<em>n|w</em>{1;n-1})</p>
+<p>$$
+&#x8FD9;&#x662F;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x8BCD;&#x9884;&#x6D4B;&#x4EFB;&#x52A1;,&#x5176;&#x4E2D;&#x9884;&#x6D4B;&#x7684;&#x6BCF;&#x4E2A;&#x8BCD;&#x90FD;&#x53D6;&#x51B3;&#x4E8E;&#x5176;&#x524D;&#x9762;&#x7684;&#x8BCD;.</p>
+<p>&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x4F7F;&#x7528;<strong>&#x9A6C;&#x5C14;&#x79D1;&#x592B;&#x5047;&#x8BBE;</strong>,&#x8BE5;&#x5047;&#x8BBE;&#x89C4;&#x5B9A;&#x672A;&#x6765;&#x7684;&#x72B6;&#x6001;&#x548C;&#x73B0;&#x5728;&#x7ED9;&#x5B9A;&#x7684;&#x72B6;&#x6001;&#x662F;&#x65E0;&#x5173;&#x7684;.&#x5F62;&#x5F0F;&#x4E0A;,&#x4E00;&#x4E2A;k&#x9636;&#x9A6C;&#x5C14;&#x79D1;&#x592B;&#x5047;&#x8BBE;&#x5047;&#x8BBE;&#x5E8F;&#x5217;&#x4E2D;&#x4E0B;&#x4E00;&#x4E2A;&#x8BCD;&#x53EA;&#x4F9D;&#x8D56;&#x4E8E;&#x5176;&#x524D;k&#x4E2A;&#x8BCD;:</p>
+<p>$$
+P(w<em>{i+1}|w</em>{1;i}) \approx P(w<em>{i+1}|w</em>{i-k;i})</p>
+<p>$$
+&#x53E5;&#x5B50;&#x6982;&#x7387;&#x7684;&#x4F30;&#x8BA1;&#x5C31;&#x53D8;&#x6210;:</p>
+<p>$$
+P(w<em>{1;n}) \approx \prod</em>{i=1}^n P(w<em>i|w</em>{i-k;i-1})</p>
+<p>$$
+&#x5176;&#x4E2D;$w_{-k+1},...,w_0$&#x88AB;&#x5B9A;&#x4E49;&#x4E3A;&#x7279;&#x6B8A;&#x7684;&#x8865;&#x9F50;&#x7B26;&#x53F7;.(&#x56E0;&#x4E3A;$w_0$&#x524D;&#x9762;&#x6CA1;&#x6709;&#x8BCD;&#x5E8F;&#x5217;&#x4E86;).</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x4EFB;&#x52A1;&#x5C31;&#x662F;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x5927;&#x91CF;&#x6587;&#x672C;&#x51C6;&#x786E;&#x5730;&#x4F30;&#x7B97;&#x51FA;$P(w<em>{i+1}|w</em>{i-k;i})$.</p>
+<p>&#x8FD9;&#x4E00;&#x7AE0;&#x8BA8;&#x8BBA;&#x4E86;k&#x9636;&#x8BED;&#x8A00;&#x6A21;&#x578B;.&#x5728;&#x7B2C;14&#x7AE0;&#x8BA8;&#x8BBA;&#x672A;&#x4F7F;&#x7528;&#x9A6C;&#x5C14;&#x79D1;&#x592B;&#x5047;&#x8BBE;&#x7684;&#x8BED;&#x8A00;&#x5EFA;&#x6A21;&#x6280;&#x672F;.</p>
+<h2 id="&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x8BC4;&#x4F30;&#x56F0;&#x60D1;&#x5EA6;">&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x8BC4;&#x4F30;:&#x56F0;&#x60D1;&#x5EA6;</h2>
+<p>&#x6709;&#x51E0;&#x79CD;&#x8BC4;&#x4EF7;&#x8BED;&#x8A00;&#x5EFA;&#x6A21;&#x7684;&#x5EA6;&#x91CF;.</p>
+<ol>
+<li><p>&#x4EE5;&#x5E94;&#x7528;&#x4E3A;&#x4E2D;&#x5FC3;&#x7684;&#x5EA6;&#x91CF;&#x65B9;&#x6CD5;&#x901A;&#x8FC7;&#x5728;&#x66F4;&#x9AD8;&#x7EA7;&#x522B;&#x7684;&#x4EFB;&#x52A1;&#x4E2D;&#x7684;&#x6027;&#x80FD;&#x6765;&#x8FDB;&#x884C;&#x8BC4;&#x4EF7;.</p>
+<blockquote>
+<p>&#x4F8B;&#x5982;,&#x5F53;&#x5C06;&#x7FFB;&#x8BD1;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x7EC4;&#x4EF6;&#x4ECE;A&#x66FF;&#x6362;&#x4E3A;B&#x540E;,&#x6D4B;&#x91CF;&#x7FFB;&#x8BD1;&#x8D28;&#x91CF;&#x63D0;&#x9AD8;&#x7684;&#x7A0B;&#x5EA6;.</p>
+</blockquote>
+</li>
+<li><p>&#x66F4;&#x76F4;&#x89C2;&#x7684;&#x8BC4;&#x4F30;&#x65B9;&#x6CD5;&#x662F;&#x5BF9;&#x4E8E;&#x672A;&#x89C1;&#x7684;&#x53E5;&#x5B50;&#x4F7F;&#x7528;&#x56F0;&#x60D1;&#x5EA6;(perplexity).&#x56F0;&#x60D1;&#x5EA6;&#x662F;&#x4E00;&#x79CD;&#x4FE1;&#x606F;&#x8BBA;&#x6D4B;&#x5EA6;,&#x7528;&#x6765;&#x6D4B;&#x91CF;&#x4E00;&#x4E2A;&#x6982;&#x7387;&#x6A21;&#x578B;&#x9884;&#x6D4B;&#x6837;&#x672C;&#x7684;&#x597D;&#x574F;,<strong>&#x56F0;&#x60D1;&#x5EA6;&#x8D8A;&#x4F4E;&#x8D8A;&#x597D;.</strong></p>
+<blockquote>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x5305;&#x542B;n&#x4E2A;&#x8BCD;&#x7684;&#x6587;&#x672C;&#x8BED;&#x6599;$w<em>1,...,w_n$(n&#x53EF;&#x4EE5;&#x6570;&#x4EE5;&#x767E;&#x4E07;&#x8BA1;)&#x548C;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;&#x8BCD;&#x8BED;&#x5386;&#x53F2;&#x7684;&#x7528;&#x4E8E;&#x4E3A;&#x8BCD;&#x8BED;&#x5206;&#x914D;&#x6982;&#x7387;&#x7684;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x51FD;&#x6570;LM,LM&#x5728;&#x8FD9;&#x4E2A;&#x8BED;&#x6599;&#x7684;&#x56F0;&#x60D1;&#x5EA6;&#x662F;:
+$$
+2^{-\frac{1}{n}\sum</em>{i=1}^n\log<em>2\rm{LM}(w_i|w</em>{1;i-1})}
+$$
+<strong>&#x597D;&#x7684;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x5C06;&#x4F1A;&#x4E3A;&#x8BED;&#x6599;&#x4E2D;&#x7684;&#x6837;&#x4F8B;&#x5206;&#x914D;&#x66F4;&#x9AD8;&#x7684;&#x6982;&#x7387;,&#x4E5F;&#x4F1A;&#x6709;&#x66F4;&#x4F4E;&#x7684;&#x56F0;&#x60D1;&#x5EA6;&#x503C;</strong>.</p>
+<p>&#x56F0;&#x60D1;&#x5EA6;&#x662F;&#x4E0E;&#x8BED;&#x6599;&#x6709;&#x5173;&#x7684;---&#x4E24;&#x79CD;&#x8BED;&#x8A00;&#x6A21;&#x578B;<strong>&#x53EA;&#x6709;&#x5728;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x8BC4;&#x4EF7;&#x8BED;&#x6599;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x624D;&#x53EF;&#x4EE5;&#x6BD4;&#x8F83;&#x56F0;&#x60D1;&#x5EA6;</strong>.</p>
+<p><u>&#x4F46;&#x56F0;&#x60D1;&#x5EA6;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x597D;&#x7684;&#x7528;&#x4E8E;&#x53BB;&#x8BC4;&#x4F30;&#x8BED;&#x8A00;&#x7406;&#x89E3;&#x6216;&#x8005;&#x8BED;&#x8A00;&#x5904;&#x7406;&#x4EFB;&#x52A1;&#x7684;&#x5EA6;&#x91CF;.</u></p>
+</blockquote>
+</li>
+</ol>
+<h2 id="&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x7684;&#x4F20;&#x7EDF;&#x65B9;&#x6CD5;">&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x7684;&#x4F20;&#x7EDF;&#x65B9;&#x6CD5;</h2>
+<p>&#x5BF9;&#x4E8E;k&#x9636;&#x9A6C;&#x5C14;&#x79D1;&#x592B;&#x6027;&#x8D28;,$P(w<em>{i+1}=m|w</em>{1:i}) \approx P(w<em>{i+1}=m|w</em>{i-k:i})$,&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x7684;&#x4EFB;&#x52A1;&#x662F;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5BF9;$\hat{P}(w<em>{i+1}=m|w</em>{i-k:i})$&#x7684;&#x826F;&#x597D;&#x4F30;&#x8BA1;.&#x8FD9;&#x4E2A;&#x4F30;&#x8BA1;&#x901A;&#x5E38;&#x7531;&#x8BED;&#x6599;&#x7EDF;&#x8BA1;&#x5F97;&#x5230;.</p>
+<p>$#(w<em>{i:j})$&#x8868;&#x793A;$w</em>{i:j}$&#x5728;&#x8BED;&#x6599;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x6570;&#x76EE;.$\hat{P}(w<em>{i+1}=m|w</em>{i-k:i})$&#x7684;&#x6700;&#x5927;&#x4F3C;&#x7136;&#x4F30;&#x8BA1;(MLE)&#x662F;:</p>
+<p>$$
+\hat{P}<em>{MLE}(w</em>{i+1}=m|w<em>{i-k:i}) = \frac{#(w</em>{i-k:i+1})}{#(w_{i-k:i})}</p>
+<p>$$
+&#x8FD9;&#x79CD;&#x4F20;&#x7EDF;&#x65B9;&#x6CD5;&#x5C3D;&#x7BA1;&#x6709;&#x6548;,&#x4F46;&#x5F88;&#x5927;&#x7684;&#x4E0D;&#x8DB3;:&#x5982;&#x679C;&#x5E8F;&#x5217;$w<em>{i-k:i+1}$&#x4ECE;&#x672A;&#x5728;&#x8BED;&#x6599;&#x4E2D;&#x89C2;&#x5BDF;&#x5230;(&#x5373;$#(w</em>{i-k:i+1}=0)$),&#x6A21;&#x578B;&#x5206;&#x914D;&#x7684;&#x6982;&#x7387;&#x4E5F;&#x4F1A;&#x662F;0;<strong>0&#x6982;&#x7387;&#x4F1A;&#x9020;&#x6210;&#x975E;&#x5E38;&#x5927;&#x7684;&#x56F0;&#x60D1;&#x5EA6;</strong>.</p>
+<blockquote>
+<p>&#x4E00;&#x79CD;&#x907F;&#x514D;0-&#x6982;&#x7387;&#x65F6;&#x95F4;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x4F7F;&#x7528;<strong>&#x5E73;&#x6ED1;&#x6280;&#x672F;</strong>,&#x786E;&#x4FDD;&#x4E3A;&#x6BCF;&#x4E2A;&#x53EF;&#x80FD;&#x7684;&#x60C5;&#x51B5;&#x90FD;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x6982;&#x7387;(&#x53EF;&#x80FD;&#x975E;&#x5E38;&#x5C0F;).</p>
+<ul>
+<li><p>&#x6DFB;&#x52A0;&#x5E73;&#x6ED1;&#x6280;&#x672F;,&#x4E5F;&#x53EB;&#x4F5C;&#x52A0;add-$\alpha$&#x5E73;&#x6ED1;</p>
+<p>&#x5B83;&#x5047;&#x8BBE;&#x6BCF;&#x4E2A;&#x4E8B;&#x4EF6;&#x9664;&#x4E86;&#x8BED;&#x6599;&#x4E2D;&#x89C2;&#x6D4B;&#x7684;&#x60C5;&#x51B5;&#x5916;,&#x81F3;&#x5C11;&#x8FD8;&#x53D1;&#x751F;&#x4E86;$\alpha$&#x6B21;.&#x8FD9;&#x4E2A;&#x4F30;&#x8BA1;&#x5C31;&#x53D8;&#x6210;&#x4E86;:
+$$
+\hat{P}<em>{\rm{add}-\alpha}(w</em>{i+1}=m|w<em>{i-k:i}) = \frac{#(w</em>{i-k:i+1})+\alpha}{#(w_{i-k:i})+\alpha |V|}
+$$
+&#x5176;&#x4E2D;,|V|&#x662F;&#x8BCD;&#x8868;&#x5927;&#x5C0F;,$0 &lt; \alpha \le 1$.</p>
+</li>
+<li><p>&#x9000;&#x907F;(back-off)</p>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x89C2;&#x6D4B;&#x5230;k&#x5143;&#x6587;&#x6CD5;,&#x90A3;&#x4E48;&#x5C31;&#x57FA;&#x4E8E;(k-1)&#x5143;&#x6587;&#x6CD5;&#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x4F30;&#x8BA1;&#x503C;.&#x4EE3;&#x8868;&#x6027;&#x4F8B;&#x5B50;&#x662F;<strong>&#x8D3E;&#x91CC;&#x5C3C;&#x514B;&#x63D2;&#x503C;&#x5E73;&#x6ED1;</strong>.
+$$
+\hat{P<em>{\rm{int}}}(w</em>{i+1}=m|w<em>{i-k:i}) = \lambda</em>{w<em>{i-k:i}}  \frac{#(w</em>{i-k:i+1})}{#(w<em>{i-k:i})} + (1-\lambda</em>{w<em>{i-k:i}})\hat{P</em>{\rm{int}}}(w<em>{i+1}=m|w</em>{i-(k-1):i})
+$$</p>
+</li>
+<li><p>&#x6539;&#x8FDB;&#x7684;Knerser Ney&#x5E73;&#x6ED1;&#x6280;&#x672F;</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="&#x5EF6;&#x4F38;&#x9605;&#x8BFB;">&#x5EF6;&#x4F38;&#x9605;&#x8BFB;</h3>
+<p>Michael Collins&#x7684;&#x4E0A;&#x8BFE;&#x7B14;&#x8BB0;&#x4E2D;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x4EFB;&#x52A1;&#x7684;&#x5F88;&#x597D;&#x7684;&#x6B63;&#x5F0F;&#x63CF;&#x8FF0;&#x548C;&#x56F0;&#x60D1;&#x5EA6;&#x80CC;&#x540E;&#x7684;&#x52A8;&#x673A;.</p>
+<blockquote>
+<p><a href="http://www.cs.columbia.edu/~mcollins/lm-spring2013.pdf" target="_blank">http://www.cs.columbia.edu/~mcollins/lm-spring2013.pdf</a></p>
+</blockquote>
+<p>&#x5E73;&#x6ED1;&#x6280;&#x672F;&#x7684;&#x826F;&#x597D;&#x6982;&#x8FF0;&#x548C;&#x7ECF;&#x9A8C;&#x8BC4;&#x4F30;&#x53EF;&#x4EE5;&#x5728;Chen&#x548C;Goodman[1999]&#x4EE5;&#x53CA;Goodman[2001]&#x7684;&#x5DE5;&#x4F5C;&#x4E2D;&#x627E;&#x5230;.</p>
+<p>&#x53EF;&#x4EE5;&#x5728;Mikolov&#x535A;&#x58EB;&#x8BBA;&#x6587;(Mikolov[2012])&#x4E2D;&#x7684;&#x80CC;&#x666F;&#x7AE0;&#x8282;&#x627E;&#x5230;&#x4F20;&#x7EDF;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x6280;&#x672F;&#x7684;&#x7EFC;&#x8FF0;.</p>
+<p>&#x5BF9;&#x4E8E;&#x524D;&#x6CBF;&#x975E;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x7684;&#x4ECB;&#x7ECD;&#x53EF;&#x4EE5;&#x67E5;&#x770B;Pelemans&#x7B49;[2016].</p>
+<h3 id="&#x4F20;&#x7EDF;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x7684;&#x9650;&#x5236;">&#x4F20;&#x7EDF;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x7684;&#x9650;&#x5236;</h3>
+<p>&#x57FA;&#x4E8E;&#x6700;&#x5927;&#x4F3C;&#x7136;&#x4F30;&#x8BA1;(MLE)&#x7684;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x5F88;&#x5BB9;&#x6613;&#x8BAD;&#x7EC3;,&#x53EF;&#x6269;&#x5C55;&#x5230;&#x5927;&#x89C4;&#x6A21;&#x8BED;&#x6599;,&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x4E2D;&#x8868;&#x73B0;&#x826F;&#x597D;.&#x7136;&#x800C;,&#x5B83;&#x6709;&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x7F3A;&#x70B9;.</p>
+<p>&#x9000;&#x907F;&#x6CD5;&#x7684;&#x7F3A;&#x70B9;&#x5728;&#x4E8E;&#x4E0D;&#x591F;&#x7075;&#x6D3B;,&#x56E0;&#x4E3A;&#x5B83;&#x9700;&#x8981;&#x4E8B;&#x5148;&#x5047;&#x8BBE;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x7684;&#x5FC5;&#x987B;&#x4EBA;&#x5DE5;&#x8BBE;&#x8BA1;&#x7684;&#x9000;&#x907F;&#x89C4;&#x5219;.(&#x4F8B;&#x5982;,&#x5982;&#x679C;&#x60F3;&#x8981;&#x57FA;&#x4E8E;&#x524D;k&#x4E2A;&#x8BCD;&#x5E76;&#x4E14;&#x57FA;&#x4E8E;&#x6587;&#x672C;&#x7C7B;&#x578B;&#x8BBE;&#x7F6E;&#x6761;&#x4EF6;,&#x9000;&#x907F;&#x6CD5;&#x662F;&#x5E94;&#x8BE5;&#x9996;&#x5148;&#x629B;&#x5F03;&#x524D;&#x7B2C;k&#x4E2A;&#x8BCD;&#x8FD8;&#x662F;&#x7C7B;&#x578B;&#x53D8;&#x91CF;?).</p>
+<p>&#x57FA;&#x4E8E;&#x6700;&#x5927;&#x4F3C;&#x7136;&#x4F30;&#x8BA1;&#x7684;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x5B58;&#x5728;&#x7A00;&#x758F;&#x95EE;&#x9898;.&#x5B83;&#x4F7F;&#x5F97;&#x8BE5;&#x7B97;&#x6CD5;&#x5F88;&#x96BE;&#x5728;&#x66F4;&#x5927;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x6761;&#x4EF6;&#x8BED;&#x5883;&#x4E2D;&#x6709;&#x6548;.</p>
+<p>&#x6700;&#x7EC8;,&#x57FA;&#x4E8E;&#x6700;&#x5927;&#x4F3C;&#x7136;&#x4F30;&#x8BA1;&#x7684;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x7F3A;&#x4E4F;&#x5BF9;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x6CDB;&#x5316;.&#x6BD4;&#x5982;,&#x89C2;&#x5BDF;&#x5230;black car&#x548C;blue car&#x5E76;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x6211;&#x4EEC;&#x4F30;&#x8BA1;&#x51FA;&#x73B0;red car&#x7684;&#x6982;&#x7387;,&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x6CA1;&#x6709;&#x89C2;&#x6D4B;&#x5230;&#x5B83;.<u>&#x57FA;&#x4E8E;&#x7C7B;&#x7684;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x8BD5;&#x56FE;&#x516C;&#x56FD;&#x5206;&#x5E03;&#x5F0F;&#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x8BCD;&#x805A;&#x7C7B;&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;,&#x4EE5;&#x5BFC;&#x51FA;&#x6B64;&#x7C7B;&#x4EE3;&#x66FF;&#x6216;&#x4F5C;&#x4E3A;&#x5355;&#x8BCD;&#x7684;&#x9644;&#x5C5E;&#x6210;&#x4E3A;&#x6761;&#x4EF6;.</u></p>
+<h2 id="&#x795E;&#x7ECF;&#x8BED;&#x8A00;&#x6A21;&#x578B;">&#x795E;&#x7ECF;&#x8BED;&#x8A00;&#x6A21;&#x578B;</h2>
+<p>&#x975E;&#x7EBF;&#x6027;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x4E00;&#x4E9B;&#x4F20;&#x7EDF;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x4E2D;&#x7684;&#x95EE;&#x9898;:&#x5B83;&#x53EF;&#x4EE5;&#x5728;&#x589E;&#x52A0;&#x4E0A;&#x4E0B;&#x6587;&#x89C4;&#x6A21;&#x7684;&#x540C;&#x65F6;&#x53C2;&#x6570;&#x4EC5;&#x5448;&#x7EBF;&#x6027;&#x589E;&#x957F;,&#x7F13;&#x89E3;&#x4E86;&#x624B;&#x5DE5;&#x8BBE;&#x8BA1;&#x9000;&#x907F;&#x89C4;&#x5219;&#x7684;&#x9700;&#x8981;,&#x652F;&#x6301;&#x4E0D;&#x540C;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x6CDB;&#x5316;&#x6027;&#x80FD;.</p>
+<p><u>&#x672C;&#x8282;&#x4ECB;&#x7ECD;&#x7684;&#x8FD9;&#x79CD;&#x5F62;&#x5F0F;&#x7684;&#x6A21;&#x578B;&#x7531;bengio&#x7B49;[2003]&#x63A8;&#x5E7F;</u></p>
+<p>&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x7684;&#x8F93;&#x5165;&#x662F;k&#x5143;&#x6587;&#x6CD5;$w<em>{1:k}$,&#x8F93;&#x51FA;&#x662F;&#x4E0B;&#x4E00;&#x4E2A;&#x8BCD;&#x7684;&#x6982;&#x7387;&#x5206;&#x5E03;.k&#x4E2A;&#x4E0A;&#x4E0B;&#x6587;&#x8BCD;$w</em>{1:k}$&#x88AB;&#x5F53;&#x505A;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x7A97;&#x53E3;;&#x6BCF;&#x4E2A;&#x8BCD;w&#x548C;&#x8BCD;&#x5D4C;&#x5165;$v(w) \in R^d$&#x5BF9;&#x5E94;,&#x8F93;&#x5165;&#x5411;&#x91CF;x&#x662F;k&#x4E2A;&#x8BCD;&#x7684;&#x4E32;&#x8054;&#x62FC;&#x63A5;.</p>
+<p>$$
+x  = [v(w_1);v(w_2);...;v(w_k)]</p>
+<p>$$
+&#x8F93;&#x5165;&#x7684;x&#x4E4B;&#x540E;&#x88AB;&#x4F20;&#x7ED9;&#x4E00;&#x4E2A;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x9690;&#x5C42;&#x7684;&#x591A;&#x5C42;&#x611F;&#x77E5;&#x5668;(MLP):</p>
+<p>$$
+\begin{aligned}
+\hat{y} = P(w<em>i|w</em>{1:k}) = \rm{LM}(w<em>{1:k}) &amp;= \rm{softmax}(hW^2+b^2) \
+h &amp;= g(xW^1+b^1) \
+x &amp;= [v(w_1);v(w_2);...;v(w_k)] \
+v(w) &amp;= E</em>{[w]}
+\end{aligned}</p>
+<p>$$
+V&#x662F;&#x4E00;&#x4E2A;&#x6709;&#x9650;&#x7684;&#x8BCD;&#x8868;,&#x5305;&#x62EC;&#x672A;&#x767B;&#x5F55;&#x8BCD;&#x6807;&#x8BC6;UNK,&#x53E5;&#x5B50;&#x5F00;&#x5934;&#x7684;&#x8865;&#x9F50;&#x7B26;&#x53F7;&#x6807;&#x8BC6;\<s\>,&#x4EE5;&#x53CA;&#x5E8F;&#x5217;&#x7ED3;&#x5C3E;&#x7684;&#x6807;&#x8BC6;\&lt;/s&gt;.</s\></p>
+<h3 id="&#x8BAD;&#x7EC3;">&#x8BAD;&#x7EC3;</h3>
+<p>&#x8BAD;&#x7EC3;&#x6837;&#x672C;:&#x8BED;&#x6599;&#x4E2D;&#x7684;k&#x5143;&#x6587;&#x6CD5;,&#x5176;&#x4E2D;&#x524D;k-1&#x4E2A;&#x8BCD;&#x88AB;&#x7528;&#x4F5C;&#x7279;&#x5F81;,&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x88AB;&#x7528;&#x4F5C;&#x5206;&#x7C7B;&#x7684;&#x76EE;&#x6807;&#x6807;&#x7B7E;.</p>
+<p>&#x635F;&#x5931;&#x51FD;&#x6570;:&#x4EA4;&#x53C9;&#x71B5;&#x635F;&#x5931;&#x51FD;&#x6570;(&#x4F46;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x6602;&#x8D35;&#x7684;softmax&#x64CD;&#x4F5C;,&#x8FD9;&#x5BF9;&#x4E8E;&#x975E;&#x5E38;&#x5927;&#x7684;&#x8BCD;&#x8868;&#x53EF;&#x80FD;&#x662F;&#x96BE;&#x4EE5;&#x627F;&#x53D7;&#x7684;).</p>
+<h3 id="&#x5185;&#x5B58;&#x548C;&#x8BA1;&#x7B97;&#x6548;&#x7387;">&#x5185;&#x5B58;&#x548C;&#x8BA1;&#x7B97;&#x6548;&#x7387;</h3>
+<p>k&#x4E2A;&#x8F93;&#x5165;&#x5355;&#x8BCD;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5355;&#x8BCD;&#x90FD;&#x4E3A;x&#x6DFB;&#x52A0;&#x4E86;$d<em>w$&#x7EF4;,&#x4ECE;k&#x4E2A;&#x8BCD;&#x53D8;&#x5230;k+1&#x4E2A;&#x8BCD;&#x5C06;&#x4F1A;&#x589E;&#x52A0;&#x6743;&#x91CD;&#x77E9;&#x9635;$W^1$&#x7684;&#x7EF4;&#x5EA6;,<u>&#x7EF4;&#x5EA6;&#x4ECE;$k.d_w \rm{x} d</u></em>{hid}$&#x589E;&#x52A0;&#x5230;$(k+1).d<em>w \rm{x} d</em>{hid}$,&lt;/u&gt;&#x548C;&#x57FA;&#x4E8E;&#x4F20;&#x7EDF;&#x65B9;&#x6CD5;&#x7684;&#x591A;&#x9879;&#x5F0F;&#x589E;&#x52A0;&#x76F8;&#x6BD4;,&#x8FD9;&#x5728;&#x53C2;&#x6570;&#x6570;&#x91CF;&#x4E0A;&#x662F;&#x5F88;&#x5C0F;&#x7684;&#x7EBF;&#x6027;&#x589E;&#x52A0;.</p>
+<p>&#x8BCD;&#x8868;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x8BCD;&#x90FD;&#x5BF9;&#x5E94;&#x4E8E;&#x4E00;&#x4E2A;$d<em>w$&#x7EF4;&#x5EA6;&#x7684;&#x5411;&#x91CF;(E&#x4E2D;&#x7684;&#x4E00;&#x5217;)&#x548C;&#x4E00;&#x4E2A;$d</em>{hid}$&#x7EF4;&#x5EA6;&#x7684;&#x5411;&#x91CF;($W^2$&#x4E2D;&#x7684;&#x4E00;&#x884C;).</p>
+<h3 id="&#x5927;&#x89C4;&#x6A21;&#x8F93;&#x51FA;&#x7A7A;&#x95F4;">&#x5927;&#x89C4;&#x6A21;&#x8F93;&#x51FA;&#x7A7A;&#x95F4;</h3>
+<p>&#x4F7F;&#x7528;&#x5177;&#x6709;&#x5927;&#x89C4;&#x6A21;&#x8F93;&#x51FA;&#x7A7A;&#x95F4;&#x7684;&#x795E;&#x7ECF;&#x6982;&#x7387;&#x8BED;&#x8A00;&#x6A21;&#x578B;(&#x5373;&#x6709;&#x6548;&#x5730;&#x5728;&#x6574;&#x4E2A;&#x8BCD;&#x8868;&#x4E0A;&#x8BA1;&#x7B97;softmax)&#x5728;&#x8BAD;&#x7EC3;&#x65F6;&#x95F4;&#x548C;&#x6D4B;&#x8BD5;&#x65F6;&#x95F4;&#x4E0A;&#x90FD;&#x662F;&#x4E0D;&#x53EF;&#x884C;&#x7684;.&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x5982;&#x4E0B;:</p>
+<ul>
+<li><p><strong>&#x5C42;&#x6B21;&#x5316;softmax</strong>[Morin and benjio 2005]&#x5141;&#x8BB8;&#x8BA1;&#x7B97;O(log |V|)&#x4E2D;&#x5355;&#x4E2A;&#x8BCD;&#x7684;&#x6982;&#x7387;&#x800C;&#x4E0D;&#x662F;O(|V|)</p>
+<p>&#x8FD9;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5C06;softmax&#x7684;&#x8BA1;&#x7B97;&#x6784;&#x5EFA;&#x6210;&#x904D;&#x5386;&#x6811;&#x7684;&#x5F62;&#x5F0F;&#x5F97;&#x5230;,&#x6BCF;&#x4E2A;&#x8BCD;&#x7684;&#x6982;&#x7387;&#x4F5C;&#x4E3A;&#x6811;&#x7684;&#x679D;&#x5E72;&#x88AB;&#x9009;&#x62E9;&#x7684;&#x4E58;&#x79EF;.</p>
+</li>
+<li><p><strong>&#x81EA;&#x5F52;&#x4E00;&#x5316;&#x65B9;&#x6CD5;</strong>&#x4F8B;&#x5982;&#x566A;&#x58F0;&#x5BF9;&#x6BD4;&#x4F30;&#x8BA1;(NCE)[Mnih and Teh, 2012, Vaswani et al., 2013]&#x6216;&#x8005;&#x5728;&#x8BAD;&#x7EC3;&#x76EE;&#x6807;&#x4E2D;&#x589E;&#x52A0;&#x5F52;&#x4E00;&#x5316;&#x9879;.</p>
+<p>NCE&#x65B9;&#x6CD5;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x4E00;&#x7CFB;&#x5217;<strong>&#x4E8C;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#x66FF;&#x6362;&#x4EA4;&#x53C9;&#x71B5;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x63D0;&#x5347;&#x4E86;&#x8BAD;&#x7EC3;&#x65F6;&#x95F4;&#x6548;&#x7387;</strong>,&#x9700;&#x8981;&#x8BC4;&#x4F30;&#x5BF9;&#x4E8E;k&#x4E2A;&#x968F;&#x673A;&#x8BCD;&#x800C;&#x4E0D;&#x662F;&#x6574;&#x4E2A;&#x8BCD;&#x8868;&#x7684;&#x5206;&#x914D;&#x6570;&#x503C;.&#x4E5F;&#x53EF;<strong>&#x901A;&#x8FC7;&#x5C06;&#x6A21;&#x578B;&#x63A8;&#x5411;&#x751F;&#x4EA7;&quot;&#x8FD1;&#x4F3C;&#x5F52;&#x4E00;&#x5316;&quot;&#x6307;&#x6570;&#x5F97;&#x5206;&#x6765;&#x63D0;&#x9AD8;&#x6D4B;&#x8BD5;&#x65F6;&#x95F4;</strong>,&#x662F;&#x6A21;&#x578B;&#x5F97;&#x5206;&#x4E3A;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x51FA;&#x73B0;&#x6982;&#x7387;&#x7684;&#x826F;&#x597D;&#x66FF;&#x4EE3;.</p>
+</li>
+<li><p>&#x53E6;&#x4E00;&#x7C7B;&#x72EC;&#x7ACB;&#x7684;&#x5DE5;&#x4F5C;&#x662F;&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;&#x5B57;&#x7B26;&#x7EA7;&#x6765;&#x56DE;&#x907F;&#x95EE;&#x9898;,&#x800C;&#x4E0D;&#x662F;&#x8BCD;&#x8BED;&#x7EA7;.</p>
+</li>
+</ul>
+<blockquote>
+<p>&#x4E00;&#x4E2A;&#x4E0D;&#x9519;&#x7684;&#x7EFC;&#x8FF0;&#x548C;&#x5C06;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x4E0E;&#x5176;&#x4ED6;&#x5904;&#x7406;&#x5927;&#x8F93;&#x51FA;&#x8BCD;&#x8868;&#x7684;&#x6280;&#x672F;&#x7684;&#x5BF9;&#x6BD4;&#x53C2;&#x89C1;Chen&#x7B49;[2016]</p>
+</blockquote>
+<h3 id="&#x671F;&#x671B;&#x7279;&#x6027;">&#x671F;&#x671B;&#x7279;&#x6027;</h3>
+<p>&#x53EA;&#x8003;&#x8651;&#x6761;&#x4EF6;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x548C;&#x751F;&#x6210;&#x672A;&#x89C1;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x7075;&#x6D3B;&#x6027;,&#x4EE5;&#x53CA;&#x5185;&#x5B58;&#x4E0E;&#x8BA1;&#x7B97;&#x65B9;&#x9762;&#x4EC5;&#x7EBF;&#x6027;&#x4F9D;&#x8D56;&#x4E8E;&#x6709;&#x5F71;&#x54CD;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x89C4;&#x6A21;,&#x8FD9;&#x4E9B;&#x4F7F;&#x5F97;&#x8C03;&#x8282;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x5927;&#x5C0F;&#x53D8;&#x5F97;&#x975E;&#x5E38;&#x5BB9;&#x6613;,&#x4E0D;&#x4F1A;&#x56E0;&#x6570;&#x636E;&#x7A00;&#x758F;&#x548C;&#x8BA1;&#x7B97;&#x6548;&#x7387;&#x800C;&#x53D7;&#x635F;.</p>
+<p>&#x795E;&#x7ECF;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x53EF;&#x4EE5;&#x8F7B;&#x677E;&#x878D;&#x5165;&#x8F83;&#x5927;&#x800C;&#x7075;&#x6D3B;&#x7684;&#x6761;&#x4EF6;&#x4E0A;&#x4E0B;&#x6587;&#x5E76;&#x5141;&#x8BB8;&#x5BF9;&#x4E0A;&#x4E0B;&#x6587;&#x81EA;&#x7531;&#x5B9A;&#x4E49;.&#x4F8B;&#x5982;,Devlin&#x7B49;[2014]&#x63D0;&#x51FA;&#x4E86;&#x4E00;&#x79CD;&#x673A;&#x5668;&#x7FFB;&#x8BD1;&#x6A21;&#x578B;,&#x5176;&#x4E2D;&#x4E0B;&#x4E00;&#x4E2A;&#x8BCD;&#x7684;&#x6982;&#x7387;&#x7531;&#x5DF2;&#x7ECF;&#x751F;&#x6210;&#x7684;&#x524D;k&#x4E2A;&#x8BCD;&#x548C;&#x5728;&#x6E90;&#x8BED;&#x8A00;&#x4E2D;&#x7684;m&#x4E2A;&#x8BCD;&#x6240;&#x51B3;&#x5B9A;,&#x8FD9;m&#x4E2A;&#x8BCD;&#x5728;&#x7FFB;&#x8BD1;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#x662F;&#x7ED9;&#x5B9A;&#x7684;.&#x8FD9;&#x5141;&#x8BB8;&#x6A21;&#x578B;&#x5BF9;&#x7279;&#x5B9A;&#x4E3B;&#x9898;&#x7684;&#x672F;&#x8BED;&#x548C;&#x6E90;&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x591A;&#x8BCD;&#x8868;&#x8FBE;&#x5F0F;&#x66F4;&#x52A0;&#x654F;&#x611F;,&#x5B83;&#x5B9E;&#x9645;&#x4E0A;&#x5F88;&#x5927;&#x5730;&#x63D0;&#x9AD8;&#x4E86;&#x7FFB;&#x8BD1;&#x6210;&#x7EE9;.</p>
+<h3 id="&#x5C40;&#x9650;">&#x5C40;&#x9650;</h3>
+<ul>
+<li>&#x9884;&#x6D4B;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x4E00;&#x4E2A;&#x8BCD;&#x7684;&#x6982;&#x7387;&#x6BD4;&#x4F7F;&#x7528;&#x4F20;&#x7EDF;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x4EE3;&#x4EF7;&#x66F4;&#x9AD8;,&#x4F7F;&#x7528;&#x5927;&#x89C4;&#x6A21;&#x8BCD;&#x5178;&#x548C;&#x8BAD;&#x7EC3;&#x8BED;&#x6599;&#x4E5F;&#x53D8;&#x5F97;&#x96BE;&#x4EE5;&#x63A5;&#x53D7;.&#x4F46;&#x5B83;&#x4EEC;&#x80FD;&#x591F;&#x66F4;&#x597D;&#x7684;&#x5229;&#x7528;&#x6570;&#x636E;,&#x751A;&#x81F3;&#x5728;&#x76F8;&#x5BF9;&#x8F83;&#x5C0F;&#x7684;&#x8BAD;&#x7EC3;&#x96C6;&#x4E0A;&#x53D6;&#x5F97;&#x5F88;&#x6709;&#x7ADE;&#x4E89;&#x529B;&#x7684;&#x56F0;&#x60D1;&#x5EA6;.</li>
+</ul>
+<p>&#x4F20;&#x7EDF;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x4E0E;&#x795E;&#x7ECF;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x7ED3;&#x5408;&#x65F6;,&#x7FFB;&#x8BD1;&#x8D28;&#x91CF;&#x786E;&#x5B9E;&#x4F1A;&#x63D0;&#x9AD8;;&#x795E;&#x7ECF;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x5BF9;&#x4E8E;&#x672A;&#x89C1;&#x7684;&#x4E8B;&#x4EF6;&#x6CDB;&#x5316;&#x6027;&#x80FD;&#x66F4;&#x597D;,&#x4F46;&#x662F;&#x6709;&#x65F6;&#x8FD9;&#x79CD;&#x6CDB;&#x5316;&#x4F1A;&#x635F;&#x5931;&#x6027;&#x80FD;,&#x800C;&#x521A;&#x6027;&#x7684;&#x4F20;&#x7EDF;&#x65B9;&#x6CD5;&#x4F1A;&#x66F4;&#x597D;&#x4E00;&#x4E9B;.</p>
+<blockquote>
+<p>&#x53C2;&#x89C1;Pelemans&#x7B49;[2016]&#x548C;&#x5176;&#x4E2D;&#x7684;&#x6587;&#x732E;,&#x67E5;&#x770B;&#x76F8;&#x5173;&#x4E0E;&#x4F7F;&#x7528;skip-gram&#x7528;&#x4E8E;&#x63A2;&#x7D22;&#x975E;&#x795E;&#x7ECF;&#x8BED;&#x8A00;&#x6A21;&#x578B;.</p>
+</blockquote>
+<h2 id="&#x4F7F;&#x7528;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x8FDB;&#x884C;&#x751F;&#x6210;">&#x4F7F;&#x7528;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x8FDB;&#x884C;&#x751F;&#x6210;</h2>
+<p>&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x4E5F;&#x53EF;&#x7528;&#x4E8E;&#x751F;&#x6210;&#x53E5;&#x5B50;.</p>
+<h3 id="&#x7F16;&#x7801;&#x8BAD;&#x7EC3;">&#x7F16;&#x7801;(&#x8BAD;&#x7EC3;)</h3>
+<blockquote>
+<p>&#x5728;&#x7ED9;&#x5B9A;&#x6587;&#x672C;&#x96C6;&#x5408;&#x4E0A;&#x8BAD;&#x7EC3;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x4E4B;&#x540E;,&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x8FC7;&#x7A0B;&#x6839;&#x636E;&#x5176;&#x6982;&#x7387;&#x4ECE;&#x6A21;&#x578B;&#x751F;&#x6210;(&quot;&#x62BD;&#x6837;&quot;)&#x968F;&#x673A;&#x53E5;&#x5B50;:</p>
+<p>&#x9884;&#x6D4B;&#x57FA;&#x4E8E;&#x8D77;&#x59CB;&#x7B26;&#x53F7;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x8BCD;&#x7684;&#x6982;&#x7387;&#x5206;&#x5E03;.&#x5E76;&#x6839;&#x636E;<u>&#x9884;&#x6D4B;&#x5206;&#x5E03;</u>&#x7ED8;&#x5236;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x8BCD;.&#x7136;&#x540E;,&#x9884;&#x6D4B;&#x57FA;&#x4E8E;&#x7B2C;&#x4E00;&#x4E2A;&#x8BCD;&#x7684;<u>&#x7B2C;&#x4E8C;&#x4E2A;&#x8BCD;&#x7684;&#x6982;&#x7387;&#x5206;&#x5E03;</u>.</p>
+<p>&#x5982;&#x6B64;&#x9884;&#x6D4B;&#x540E;&#x9762;&#x7684;&#x5206;&#x5E03;,&#x76F4;&#x5230;&#x9884;&#x6D4B;&#x5230;&#x5E8F;&#x5217;&#x7ED3;&#x675F;&#x7684;&#x7B26;&#x53F7;\&lt;/s&gt;.</p>
+</blockquote>
+<h3 id="&#x89E3;&#x7801;&#x751F;&#x6210;">&#x89E3;&#x7801;(&#x751F;&#x6210;)</h3>
+<p>&#x5F53;&#x4ECE;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x8BAD;&#x7EC3;&#x7684;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x4E2D;&#x8FDB;&#x884C;&#x89E3;&#x7801;(&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x53E5;&#x5B50;)&#x7684;&#x65F6;&#x5019;,&#x53EF;&#x4EE5;&#x5728;&#x6BCF;&#x4E2A;&#x6B65;&#x9AA4;&#x4E2D;<strong>&#x9009;&#x62E9;&#x5F97;&#x5206;&#x6700;&#x9AD8;&#x7684;&#x9884;&#x6D4B;(&#x5355;&#x8BCD;)</strong>,&#x6216;&#x8005;<strong>&#x6839;&#x636E;&#x9884;&#x6D4B;&#x5206;&#x5E03;&#x968F;&#x673A;&#x91C7;&#x6837;&#x51FA;&#x4E00;&#x4E2A;&#x5B57;</strong>,&#x6216;&#x8005;<strong>&#x4F7F;&#x7528;beam Search&#x6765;&#x67E5;&#x627E;&#x5177;&#x6709;&#x5168;&#x5C40;&#x9AD8;&#x6982;&#x7387;&#x7684;&#x5E8F;&#x5217;</strong>.</p>
+<blockquote>
+<p>&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x5728;&#x6BCF;&#x4E2A;&#x6B65;&#x9AA4;&#x5747;&#x9009;&#x62E9;&#x6700;&#x9AD8;&#x9884;&#x6D4B;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x6B21;&#x4F18;&#x7684;&#x603B;&#x4F53;&#x6982;&#x7387;,&#x5B83;&#x6709;&#x53EF;&#x80FD;&quot;&#x4F7F;&#x81EA;&#x5DF1;&#x9677;&#x5165;&#x56F0;&#x5883;&quot;,&#x4ECE;&#x800C;&#x5BFC;&#x81F4;&#x548C;&#x9762;&#x662F;&#x4F4E;&#x6982;&#x7387;&#x4E8B;&#x4EF6;.<strong>&#x8FD9;&#x88AB;&#x79F0;&#x4E3A;&#x6807;&#x7B7E;&#x504F;&#x7F6E;&#x95EE;&#x9898;</strong></p>
+<p>Andor&#x7B49;&#x4EBA;[2016]&#x548C;Lafferty&#x7B49;&#x4EBA;[2001]&#x6709;&#x6DF1;&#x5165;&#x7684;&#x8BA8;&#x8BBA;.</p>
+</blockquote>
+<h2 id="&#x526F;&#x4EA7;&#x54C1;&#x8BCD;&#x7684;&#x8868;&#x793A;">&#x526F;&#x4EA7;&#x54C1;:&#x8BCD;&#x7684;&#x8868;&#x793A;</h2>
+<p>&#x77E9;&#x9635;$W^2$&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x5217;&#x90FD;&#x662F;&#x4E00;&#x4E2A;$d_{hid}$&#x7EF4;&#x7684;&#x5411;&#x91CF;,&#x8BE5;&#x77E9;&#x9635;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x5217;&#x90FD;&#x4F1A;&#x4E58;&#x4EE5;&#x6587;&#x672C;&#x8868;&#x793A;$h$,&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x76F8;&#x5173;&#x8BCD;&#x9879;&#x7684;&#x5206;&#x6570;.<strong>&#x76F4;&#x89C2;&#x5730;,&#x8FD9;&#x5E94;&#x8BE5;&#x5BFC;&#x81F4;&#x5728;&#x76F8;&#x4F3C;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x51FA;&#x73B0;&#x5177;&#x6709;&#x76F8;&#x4F3C;&#x5411;&#x91CF;&#x7684;&#x5355;&#x8BCD;.</strong></p>
+<blockquote>
+<p>&#x6839;&#x636E;&#x5206;&#x5E03;&#x5047;&#x8BBE;,&#x51FA;&#x73B0;&#x5728;&#x76F8;&#x4F3C;&#x8BED;&#x5883;&#x4E2D;&#x7684;&#x8BCD;&#x5177;&#x6709;&#x76F8;&#x4F3C;&#x7684;&#x542B;&#x4E49;,&#x5177;&#x6709;&#x76F8;&#x4F3C;&#x610F;&#x4E49;&#x7684;&#x8BCD;&#x5C06;&#x5177;&#x6709;&#x76F8;&#x4F3C;&#x7684;&#x5411;&#x91CF;.<u>&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5BF9;&#x8BCD;&#x5D4C;&#x5165;&#x77E9;&#x9635;E&#x6765;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;.</u></p>
+</blockquote>
+<p>&#x5728;&#x77E9;&#x9635;E&#x548C;$W^2$&#x7684;&#x884C;&#x548C;&#x5217;&#x4E2D;&#x5B66;&#x4E60;&#x6709;&#x7528;&#x7684;&#x8BCD;&#x8868;&#x793A;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ch08.html" class="navigation navigation-prev " aria-label="Previous page: 第八章 从文本特征到输入">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ch10.html" class="navigation navigation-next " aria-label="Next page: 第十章 预训练的词表示">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第九章 语言模型","level":"1.5","depth":1,"next":{"title":"第十章 预训练的词表示","level":"1.6","depth":1,"path":"ch10.md","ref":"ch10.md","articles":[]},"previous":{"title":"第八章 从文本特征到输入","level":"1.4","depth":1,"path":"ch08.md","ref":"ch08.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch09.md","mtime":"2018-10-23T09:42:54.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T16:12:48.013Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
